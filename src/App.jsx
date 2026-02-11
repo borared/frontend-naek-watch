@@ -1,3 +1,7 @@
+import Navbar from "./components/Navbar.jsx";
+
 export default function App() {
-	return <h1 className="text-red-600">Init</h1>;
-}
+	return (
+		<Navbar />
+	);
+};
