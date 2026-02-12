@@ -10,8 +10,8 @@ Check out the live version of the project here: [TosTrip Website](https://tos-tr
 
 ## 🛠️ Technologies Used  
 
-- **React + Vite** – Utilized for component-based architecture in order to mantaince and scalability for convient development.  
-- **CSS3** – Styling and creating a sleek, modern, and responsive design.  
+- **React + Vite** – Utilized for component based architecture in order to mantaince and scalability for convient development.  
+- **Tailwind** – Styling and creating a sleek, modern, and responsive design.  
 - **JavaScript(ES6+)** – Adding interactivity for a dynamic user experience.  
 
 ## ✨ Features  
@@ -39,5 +39,6 @@ Check out the live version of the project here: [TosTrip Website](https://tos-tr
 - **Nou Reaksmey**
 - **Sot Noreaksattya**
 - **Tep Kheng Meng Khim**
+
 
 
