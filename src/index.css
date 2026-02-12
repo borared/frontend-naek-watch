@@ -2,3 +2,6 @@
 @theme {
   --font-Kantumruy: "Kantumruy Pro", sans-serif;
 }
+body{
+  background-color: black;
+}
