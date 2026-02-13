@@ -1,39 +1,44 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import MovieLayout from "./MovieLayout.jsx";
-import sampleMovie from "../data/movies.js";
+import movies from "../data/movies.js";
 
 export default function MoviePage() {
-  const { id } = useParams();
-  const navigate = useNavigate();
+	const { id } = useParams();
+	const navigate = useNavigate();
 
-  // Find movie by ID or fallback to sampleMovie
-  const getMovieById = (id) => {
-    if (!id || id === sampleMovie.id.toString()) return sampleMovie;
+	const getMovieById = (id) => {
+		if (!id) return null;
+		const found = movies.find((m) => String(m.id) === String(id));
+		if (!found) return null;
 
-    const related = sampleMovie.related.find((m) => m.id.toString() === id);
-    if (related) {
-      return {
-        ...related,
-        cast: related.cast || sampleMovie.cast,
-        backdrop: related.backdrop || related.image || sampleMovie.backdrop,
-        poster: related.poster || related.image || sampleMovie.poster,
-        synopsis: related.synopsis || "No description available",
-        related: sampleMovie.related, // reuse old posters as placeholder
-        rating: related.rating || "-",
-        year: related.year || "Unknown",
-        duration: related.duration || "-",
-      };
-    }
-    return sampleMovie;
-  };
+		// enrich with placeholder fields expected by MovieLayout
+		return {
+			...found,
+			cast: found.cast || [],
+			related: movies.filter((m) => m.id !== found.id),
+			backdrop: found.backdrop || found.videoUrl || "",
+			poster: found.poster || "",
+			synopsis: found.synopsis || "",
+			rating: found.rating || "-",
+			year: found.year || "",
+			duration: found.duration || "",
+		};
+	};
 
-  const movie = getMovieById(id);
+	const movie = getMovieById(id);
 
-  // Navigate to related movie
-  const handleSelectMovie = (m) => {
-    navigate(`/movie/${m.id}`);
-  };
+	const handleSelectMovie = (m) => {
+		navigate(`/movie/${m.id}`);
+	};
 
-  return <MovieLayout movie={movie} onSelectMovie={handleSelectMovie} />;
+	if (!movie) {
+		return (
+			<div className="min-h-screen flex items-center justify-center bg-black text-white">
+				<p>Movie not found.</p>
+			</div>
+		);
+	}
+
+	return <MovieLayout movie={movie} onSelectMovie={handleSelectMovie} />;
 }

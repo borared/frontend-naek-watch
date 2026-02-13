@@ -5,10 +5,10 @@ export default function Navbar() {
 		<nav className="bg-black text-white px-6 py-4 flex items-center justify-between">
 			<div className="flex items-center">
 				<Link to="/">
-                    <h1 className="text-red-600 text-2xl font-bold tracking-tighter">
-                        NaekWatch
-                    </h1>
-                </Link>
+					<h1 className="text-red-600 text-2xl font-bold tracking-tighter">
+						NaekWatch
+					</h1>
+				</Link>
 			</div>
 
 			<div className="hidden md:flex space-x-8 text-sm font-medium">
@@ -54,9 +54,9 @@ export default function Navbar() {
 						stroke="currentColor"
 					>
 						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
+							strokeLinecap="round"
+							strokeLinejoin="round"
+							strokeWidth="2"
 							d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
 						/>
 					</svg>

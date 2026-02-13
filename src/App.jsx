@@ -1,19 +1,21 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar.jsx";
-import MoviePage from "./moviedisplay/MoviePage.jsx"; 
-import sampleMovie from "./data/movies.js";
+import Signup from "./signup/Signup.jsx";
+import Main from "./Page/Main.jsx";
+import Footer from "./components/Footer.jsx";
+import MoviePage from "./moviedisplay/MoviePage.jsx";
 
 export default function App() {
-  return (
-    <BrowserRouter>
-      <Navbar />
-      <Routes>
-        {/* Movie page shows initial movie */}
-        <Route path="/" element={<MoviePage movie={sampleMovie} />} />
+	return (
+		<BrowserRouter>
+			<Navbar />
+			<Routes>
+				<Route path="/" element={<Main />} />
+				<Route path="/signup" element={<Signup />} />
 
-        {/* Dynamic route for each movie */}
-        <Route path="/movie/:id" element={<MoviePage />} />
-      </Routes>
-    </BrowserRouter>
-  );
+				<Route path="/movie/:id" element={<MoviePage />} />
+			</Routes>
+			<Footer />
+		</BrowserRouter>
+	);
 }
