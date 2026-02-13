@@ -1,37 +1,27 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar.jsx";
-import MoviePage from "./moviedisplay/MoviePage.jsx"; 
-import sampleMovie from "./data/movies.js";
-
-export default function App() {
-  return (
-    <BrowserRouter>
-      <Navbar />
-      <Routes>
-        {/* Movie page shows initial movie */}
-        <Route path="/" element={<MoviePage movie={sampleMovie} />} />
-
-        {/* Dynamic route for each movie */}
-        <Route path="/movie/:id" element={<MoviePage />} />
-      </Routes>
-    </BrowserRouter>
-  );
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar.jsx";
 import Signup from "./signup/Signup.jsx";
 import Main from "./Page/Main.jsx";
 import Footer from "./components/Footer.jsx";
+import MoviePage from "./moviedisplay/MoviePage.jsx";
+import sampleMovie from "./data/movies.js";
+import { allContent } from "./data/index.js";
+
+
 
 export default function App() {
 	return (
 		<>
 			<Router>
 				<Navbar />
+				
 				<Routes>
-					<Route path="/" element={<Main />} />
-					<Route path="/signup" element={<Signup />} />
+					{/* <Route path="/" element={<Main />} />
+					<Route path="/signup" element={<Signup />} /> */}
+					<Route path="/" element={<MoviePage movie={allContent[0]} />} />
+					<Route path="/movie/:id" element={<MoviePage />} />
 				</Routes>
-			</Router>
+			</Router> 
 			{/* <Signup /> */}
 			{/* <section className="min-h-screen" /> */}
             <Footer />

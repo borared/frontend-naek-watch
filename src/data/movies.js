@@ -1,4 +1,5 @@
-const sampleMovie = {
+const sampleMovie = [
+{
   id: 1,
   title: "Midway",
   year: "2024",
@@ -64,21 +65,10 @@ const sampleMovie = {
         ],
     },
     {
-        id: 104,
-        title: "Alien: Romulus",
-        image: "https://res.cloudinary.com/dm05x6lbk/image/upload/v1770911831/image_gndxq7.png",
-        trailerUrl: "https://youtu.be/OzY2r2JXsDM?si=6O6pL9nKOTxm0w17",
-        year: "2022",
-        rating: "8.4",
-        duration: "2h 11m",
-        backdrop: "",
-        poster: "https://res.cloudinary.com/dm05x6lbk/image/upload/v1770911831/image_gndxq7.png",
-        synopsis: "Captain Pete 'Maverick' Mitchell returns to train a new generation of U.S. Navy fighter pilots.",
-        cast: [
-          { id: 1, name: "Tom Cruise", image: "" },
-          { id: 2, name: "Jennifer Connelly", image: "" },
-          { id: 3, name: "Miles Teller", image: "" },
-        ],
+        id: 201,
+        title: "Money Heist",
+        image: "https://res.cloudinary.com/dm05x6lbk/image/upload/v1770969206/image_ch0sn2.png",
+        type: "series", // important for SeasonSection
     },
     {
         id: 105,
@@ -99,6 +89,7 @@ const sampleMovie = {
 
     
   ],
-};
+}
+];
 
 export default sampleMovie;
