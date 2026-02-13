@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import MovieLayout from "./MovieLayout.jsx";
-import sampleMovie from "../data/moviedetail.js";
+import sampleMovie from "../data/movies.js";
 
 export default function MoviePage() {
   const { id } = useParams();
