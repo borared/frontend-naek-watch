@@ -112,8 +112,8 @@ const HeroSection = () => {
               transition={{ delay: 0.6 }}
               className="mt-10 flex gap-4"
             >
-              <button className="px-10 py-4 bg-white text-black font-bold text-sm hover:scale-105 transition-transform duration-200">
-                WATCH TRAILER
+              <button className="px-10 bg-white text-black font-bold text-[15px] hover:scale-105 transition-transform duration-200​​ font-Kantumruy​​ hover:cursor-pointer">
+                ទស្សនាឈុតខ្លីៗ
               </button>
               <button className="px-10 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white font-bold text-sm hover:bg-white/20 transition-all">
                 + MY LIST
