@@ -54,7 +54,7 @@ export default function Postercover({ trailerUrl, backdrop, poster, movie, onPla
         onClick={onPlay}
         className="absolute bottom-10 right-10 z-10 bg-red-600 hover:bg-red-700 transition px-6 py-3 rounded-full flex items-center gap-2 shadow-lg text-white pointer-events-auto"
       >
-        <span className="text-lg">▶</span>
+        {/* <span className="text-lg">▶</span> */}
         <span className="font-semibold">Play Movie</span>
       </button>
     </div>

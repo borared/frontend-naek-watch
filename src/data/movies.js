@@ -1,104 +1,181 @@
-const sampleMovie = {
-  id: 1,
-  title: "Midway",
-  year: "2024",
-  rating: "8.2",
-  duration: "2h 15m",
-  poster: "", // optional
-  backdrop: "https://res.cloudinary.com/dm05x6lbk/image/upload/v1770911910/image_zzxhdz.jpg",
-  trailerUrl: "https://www.youtube.com/watch?v=l9laReRAYFk",
-  synopsis: "Epic WWII action film following the Battle of Midway...",
-  cast: [
-    { id: 1, name: "Woody Harrelson", image: "https://res.cloudinary.com/dm05x6lbk/image/upload/v1770916987/image_qi9rl2.jpg" },
-    { id: 2, name: "Mandy Moore", image: "https://res.cloudinary.com/dm05x6lbk/image/upload/v1770916998/image_xuljxb.jpg" },
-    { id: 3, name: "Patrick Wilson", image: "https://res.cloudinary.com/dm05x6lbk/image/upload/v1770916968/image_cqdx1f.jpg" },
-    { id: 4, name: "Ed Skrein", image: "https://res.cloudinary.com/dm05x6lbk/image/upload/v1770916955/image_aqrjvn.jpg" },
-  ],
-  related: [
-    {
-      id: 101,
-      title: "The Creator",
-      image: "https://res.cloudinary.com/dm05x6lbk/image/upload/v1770911795/image_cxf5of.jpg",
-      trailerUrl: "https://www.youtube.com/watch?v=MAZuGdi32bk",
-      year: "2023",
-      rating: "7.8",
-      duration: "2h 10m",
-      backdrop: "",
-      poster: "https://res.cloudinary.com/dm05x6lbk/image/upload/v1770911795/image_cxf5of.jpg",
-      synopsis: "A sci-fi thriller about AI in the near future...",
-      cast: [
-        { id: 1, name: "Actor A", image: "" },
-        { id: 2, name: "Actor B", image: "" },
-      ],
-    },
-    {
-      id: 102,
-      title: "Avenger: Infinity War",
-      image: "https://res.cloudinary.com/dm05x6lbk/image/upload/v1770911765/image_d9grvc.png",
-      trailerUrl: "https://youtu.be/6ZfuNTqbHE8?si=RoWwJOyDuXcrLLOK",
-      year: "2018",
-      rating: "8.5",
-      duration: "2h 29m",
-      backdrop: "",
-      poster: "https://res.cloudinary.com/dm05x6lbk/image/upload/v1770911765/image_d9grvc.png",
-      synopsis: "The Avengers assemble to stop Thanos from collecting the Infinity Stones.",
-      cast: [
-        { id: 1, name: "Robert Downey Jr.", image: "" },
-        { id: 2, name: "Chris Evans", image: "" },
-      ],
-    },
-    {
-        id: 103,
-        title: "Dune",
-        image: "https://res.cloudinary.com/dm05x6lbk/image/upload/v1770911862/image_muln23.jpg",
-        trailerUrl: "https://youtu.be/8g18jFHCLXk?si=8T06sHTW9g0AdIjv",
-        year: "2021",
-        rating: "8.1",
-        duration: "2h 35m",
-        backdrop: "",
-        poster: "https://res.cloudinary.com/dm05x6lbk/image/upload/v1770911862/image_muln23.jpg",
-        synopsis: "A noble family becomes embroiled in a war for control over the desert planet Arrakis.",
-        cast: [
-          { id: 1, name: "Timothée Chalamet", image: "" },
-          { id: 2, name: "Zendaya", image: "" },
-        ],
-    },
-    {
-        id: 104,
-        title: "Alien: Romulus",
-        image: "https://res.cloudinary.com/dm05x6lbk/image/upload/v1770911831/image_gndxq7.png",
-        trailerUrl: "https://youtu.be/OzY2r2JXsDM?si=6O6pL9nKOTxm0w17",
-        year: "2022",
-        rating: "8.4",
-        duration: "2h 11m",
-        backdrop: "",
-        poster: "https://res.cloudinary.com/dm05x6lbk/image/upload/v1770911831/image_gndxq7.png",
-        synopsis: "Captain Pete 'Maverick' Mitchell returns to train a new generation of U.S. Navy fighter pilots.",
-        cast: [
-          { id: 1, name: "Tom Cruise", image: "" },
-          { id: 2, name: "Jennifer Connelly", image: "" },
-          { id: 3, name: "Miles Teller", image: "" },
-        ],
-    },
-    {
-        id: 105,
-        title: "Star Wars: Rogue One",
-        image: "https://res.cloudinary.com/dm05x6lbk/image/upload/v1770911837/image_dqop7r.png",
-        trailerUrl: "https://youtu.be/frdj1zb9sMY?si=faawW1BmK55BoxZs",
-        year: "2023",
-        rating: "7.9",
-        duration: "2h 49m",
-        backdrop: "",
-        poster: "",
-        synopsis: "The Rebellion makes a risky move to steal the plans for the Death Star, setting up the epic saga to follow.",
-        cast: [
-          { id: 1, name: "Felicity Jones", image: "" },
-          { id: 2, name: "Diego Luna", image: "" },
-        ],
-    }
+const movies = [
+	{
+		id: 1,
+		title: "MIDWAY",
+		director: "FROM THE DIRECTOR OF INDEPENDENCE DAY",
+		tagline: "BASED ON REAL EVENTS",
+		videoUrl:
+			"https://www.youtube.com/embed/BfTYY_pac8o?autoplay=1&mute=1&controls=0&playlist=BfTYY_pac8o&loop=1",
+		trailerUrl: "https://www.youtube.com/watch?v=BfTYY_pac8o",
+		poster:
+			"https://res.cloudinary.com/dm05x6lbk/image/upload/v1770911910/image_zzxhdz.jpg",
+		backdrop:
+			"https://res.cloudinary.com/dm05x6lbk/image/upload/v1770911910/image_zzxhdz.jpg",
+		image:
+			"https://res.cloudinary.com/dm05x6lbk/image/upload/v1770911910/image_zzxhdz.jpg",
+		year: "2024",
+		rating: "7.9",
+		duration: "2h 15m",
+		synopsis: "Epic WWII action film following the Battle of Midway.",
+		cast: [
+			{
+				id: 1,
+				name: "Woody Harrelson",
+				image:
+					"https://res.cloudinary.com/dm05x6lbk/image/upload/v1770916987/image_qi9rl2.jpg",
+			},
+			{
+				id: 2,
+				name: "Mandy Moore",
+				image:
+					"https://res.cloudinary.com/dm05x6lbk/image/upload/v1770916998/image_xuljxb.jpg",
+			},
+			{
+				id: 3,
+				name: "Patrick Wilson",
+				image:
+					"https://res.cloudinary.com/dm05x6lbk/image/upload/v1770916968/image_cqdx1f.jpg",
+			},
+		],
+		accent: "bg-blue-600",
+	},
+	{
+		id: 2,
+		title: "DUNE",
+		director: "FROM DIRECTOR DENIS VILLENEUVE",
+		tagline: "IT BEGINS",
+		videoUrl:
+			"https://www.youtube.com/embed/n9xhJrPXop4?autoplay=1&mute=1&controls=0&playlist=n9xhJrPXop4&loop=1",
+		trailerUrl: "https://www.youtube.com/watch?v=n9xhJrPXop4",
+		poster:
+			"https://res.cloudinary.com/dm05x6lbk/image/upload/v1770911862/image_muln23.jpg",
+		backdrop:
+			"https://res.cloudinary.com/dm05x6lbk/image/upload/v1770911862/image_muln23.jpg",
+		image:
+			"https://res.cloudinary.com/dm05x6lbk/image/upload/v1770911862/image_muln23.jpg",
+		year: "2021",
+		rating: "8.1",
+		duration: "2h 35m",
+		synopsis:
+			"A noble family becomes embroiled in a war for control over Arrakis.",
+		cast: [
+			{
+				id: 1,
+				name: "Timothée Chalamet",
+				image:
+					"https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80",
+			},
+			{
+				id: 2,
+				name: "Zendaya",
+				image:
+					"https://images.unsplash.com/photo-1545996124-1b7a6d3b9d5b?auto=format&fit=crop&w=400&q=80",
+			},
+		],
+		accent: "bg-orange-500",
+	},
+	{
+		id: 3,
+		title: "TENET",
+		director: "FROM CHRISTOPHER NOLAN",
+		tagline: "TIME RUNS OUT",
+		videoUrl:
+			"https://www.youtube.com/embed/LdOM0x0XDMo?autoplay=1&mute=1&controls=0&playlist=LdOM0x0XDMo&loop=1",
+		trailerUrl: "https://www.youtube.com/watch?v=LdOM0x0XDMo",
+		poster:
+			"https://images.unsplash.com/photo-1502139214987-1b0a7c7ec7a7?auto=format&fit=crop&w=800&q=80",
+		backdrop:
+			"https://images.unsplash.com/photo-1502139214987-1b0a7c7ec7a7?auto=format&fit=crop&w=1400&q=80",
+		image:
+			"https://images.unsplash.com/photo-1502139214987-1b0a7c7ec7a7?auto=format&fit=crop&w=800&q=80",
+		year: "2020",
+		rating: "7.4",
+		duration: "2h 30m",
+		synopsis: "A time-bending espionage thriller.",
+		cast: [
+			{
+				id: 1,
+				name: "John David Washington",
+				image:
+					"https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80",
+			},
+			{
+				id: 2,
+				name: "Robert Pattinson",
+				image:
+					"https://images.unsplash.com/photo-1544005315-700f5d1e0b7f?auto=format&fit=crop&w=400&q=80",
+			},
+		],
+		accent: "bg-red-600",
+	},
+	{
+		id: 4,
+		title: "THE BATMAN",
+		director: "FROM DIRECTOR MATT REEVES",
+		tagline: "UNMASK THE TRUTH",
+		videoUrl:
+			"https://www.youtube.com/embed/mqqft2x_Aa4?autoplay=1&mute=1&controls=0&playlist=mqqft2x_Aa4&loop=1",
+		trailerUrl: "https://www.youtube.com/watch?v=mqqft2x_Aa4",
+		poster:
+			"https://images.unsplash.com/photo-1542204625-3b4efe2b8b5d?auto=format&fit=crop&w=800&q=80",
+		backdrop:
+			"https://images.unsplash.com/photo-1542204625-3b4efe2b8b5d?auto=format&fit=crop&w=1400&q=80",
+		image:
+			"https://images.unsplash.com/photo-1542204625-3b4efe2b8b5d?auto=format&fit=crop&w=800&q=80",
+		year: "2022",
+		rating: "7.8",
+		duration: "2h 55m",
+		synopsis: "A dark detective story exploring Gotham's corruption.",
+		cast: [
+			{
+				id: 1,
+				name: "Robert Pattinson",
+				image:
+					"https://images.unsplash.com/photo-1544005315-700f5d1e0b7f?auto=format&fit=crop&w=400&q=80",
+			},
+			{
+				id: 2,
+				name: "Zoe Kravitz",
+				image:
+					"https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80",
+			},
+		],
+		accent: "bg-zinc-700",
+	},
+	{
+		id: 5,
+		title: "TOP GUN",
+		director: "PRODUCED BY JERRY BRUCKHEIMER",
+		tagline: "FEEL THE NEED",
+		videoUrl:
+			"https://www.youtube.com/embed/giXco2jaZ_4?autoplay=1&mute=1&controls=0&playlist=giXco2jaZ_4&loop=1",
+		trailerUrl: "https://www.youtube.com/watch?v=giXco2jaZ_4",
+		poster:
+			"https://images.unsplash.com/photo-1517604931442-37c2d4f3b3b9?auto=format&fit=crop&w=800&q=80",
+		backdrop:
+			"https://images.unsplash.com/photo-1517604931442-37c2d4f3b3b9?auto=format&fit=crop&w=1400&q=80",
+		image:
+			"https://images.unsplash.com/photo-1517604931442-37c2d4f3b3b9?auto=format&fit=crop&w=800&q=80",
+		year: "2022",
+		rating: "8.0",
+		duration: "2h 10m",
+		synopsis: "High-flying action with elite Navy pilots.",
+		cast: [
+			{
+				id: 1,
+				name: "Tom Cruise",
+				image:
+					"https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80",
+			},
+			{
+				id: 2,
+				name: "Miles Teller",
+				image:
+					"https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=400&q=80",
+			},
+		],
+		accent: "bg-yellow-500",
+	},
+];
 
-    
-  ],
-};
-
-export default sampleMovie;
+export default movies;
