@@ -2,15 +2,21 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import movies from "../../data/movies";
+
+
+const heroMovies = movies.filter((movie) => movie.id >= 1 && movie.id <= 5);
+
 const HeroSection = () => {
 	const [index, setIndex] = useState(0);
 
 	useEffect(() => {
 		const timer = setInterval(() => {
-			setIndex((prev) => (prev + 1) % movies.length);
+			setIndex((prev) => (prev + 1) % heroMovies.length);
 		}, 30000);
+
 		return () => clearInterval(timer);
-	}, [index]);
+	}, []);
+
 	return (
 		<div className="relative h-[90vh] w-full overflow-hidden bg-black font-sans">
 			<AnimatePresence mode="wait">
@@ -25,10 +31,10 @@ const HeroSection = () => {
 					{/* Video Layer */}
 					<div className="absolute inset-0 w-full h-full scale-125">
 						<iframe
-							src={movies[index].videoUrl}
+							src={heroMovies[index].videoUrl}
 							className="w-full h-full object-cover pointer-events-none"
 							allow="autoplay; encrypted-media"
-							title={movies[index].title}
+							title={heroMovies[index].title}
 						/>
 					</div>
 
@@ -44,7 +50,7 @@ const HeroSection = () => {
 							transition={{ delay: 0.3 }}
 							className="tracking-[0.4em] text-xs md:text-sm mb-4 text-gray-300 font-medium uppercase"
 						>
-							{movies[index].director}
+							{heroMovies[index].director}
 						</motion.p>
 
 						<motion.h1
@@ -53,7 +59,7 @@ const HeroSection = () => {
 							transition={{ delay: 0.4 }}
 							className="text-7xl md:text-9xl font-black tracking-tighter text-white italic leading-none mb-6"
 						>
-							{movies[index].title}
+							{heroMovies[index].title}
 						</motion.h1>
 
 						<motion.p
@@ -62,7 +68,7 @@ const HeroSection = () => {
 							transition={{ delay: 0.5 }}
 							className="tracking-[0.6em] text-sm md:text-lg text-white border-l-4 border-red-600 pl-4 uppercase"
 						>
-							{movies[index].tagline}
+							{heroMovies[index].tagline}
 						</motion.p>
 
 						<motion.div
@@ -72,12 +78,11 @@ const HeroSection = () => {
 							className="mt-10 flex gap-4"
 						>
 							<button className="px-10 bg-white text-black font-bold text-[15px] hover:scale-105 transition-transform duration-200 font-Kantumruy hover:cursor-pointer">
-                <Link
-                  to={`/movie/${movies[index].id}`}
-                >
-                  ទស្សនាឈុតខ្លីៗ
-                </Link>
-              </button>
+								<Link to={`/movie/${heroMovies[index].id}`}>
+									ទស្សនាឈុតខ្លីៗ
+								</Link>
+							</button>
+
 							<button className="px-10 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white font-bold text-sm hover:bg-white/20 transition-all">
 								+ MY LIST
 							</button>
@@ -86,25 +91,27 @@ const HeroSection = () => {
 				</motion.div>
 			</AnimatePresence>
 
-			{/* Slide Indicators & Progress Bar */}
+			{/* Slide Indicators */}
 			<div className="absolute bottom-10 right-10 z-30 flex items-center gap-4">
 				<div className="flex gap-2">
-					{movies.map((_, i) => (
+					{heroMovies.map((_, i) => (
 						<div
 							key={i}
-							className={`h-1 w-8 transition-all duration-500 ${i === index ? "bg-white w-12" : "bg-white/30"}`}
+							className={`h-1 w-8 transition-all duration-500 ${
+								i === index ? "bg-white w-12" : "bg-white/30"
+							}`}
 						/>
 					))}
 				</div>
 			</div>
 
-			{/* Auto-play Progress Timer (The Line at the bottom) */}
+			{/* Auto-play Progress Timer */}
 			<motion.div
 				key={`bar-${index}`}
 				initial={{ scaleX: 0 }}
 				animate={{ scaleX: 1 }}
 				transition={{ duration: 30, ease: "linear" }}
-				className={`absolute bottom-0 left-0 h-1 w-full origin-left z-40 ${movies[index].accent}`}
+				className={`absolute bottom-0 left-0 h-1 w-full origin-left z-40 ${heroMovies[index].accent}`}
 			/>
 		</div>
 	);

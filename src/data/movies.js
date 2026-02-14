@@ -176,6 +176,27 @@ const movies = [
 		],
 		accent: "bg-yellow-500",
 	},
+
+	// Page 1: Trending & Blockbusters
+  { id: 6, title: "The Dark Knight", image: "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDr9p1v3Cmp6sdz2DOD.jpg" },
+  { id: 7, title: "Spider-Man: Across the Spider-Verse", image: "https://image.tmdb.org/t/p/w500/8Gxv8Z7ocQdt5S0DUqszpkwdFv-.jpg" },
+  { id: 8, title: "Inception", image: "https://image.tmdb.org/t/p/w500/edv5CZvRjY9y9TnxTYQ6YpCq0Cl.jpg" },
+  { id: 9, title: "John Wick: Chapter 4", image: "https://image.tmdb.org/t/p/w500/vZloY0CcWDvSTptYnO4S1N0t9iM.jpg" },
+  { id: 10, title: "Oppenheimer", image: "https://image.tmdb.org/t/p/w500/8Gxv8Z7ocQdt5S0DUqszpkwdFv-.jpg" },
+
+  // Page 2: Sci-Fi & Adventure
+  { id: 11, title: "Interstellar", image: "https://image.tmdb.org/t/p/w500/gEU2QniE6Esh2vzp6uG6poyK6p1.jpg" },
+  { id: 12, title: "Dune: Part Two", image: "https://image.tmdb.org/t/p/w500/8bCOvYvB89X7Y9u6SSSdy8n76Y6.jpg" },
+  { id: 13, title: "Avatar: The Way of Water", image: "https://image.tmdb.org/t/p/w500/t6SnaoqUXnCfsS0nS9Hojpx9oJy.jpg" },
+  { id: 14, title: "The Martian", image: "https://image.tmdb.org/t/p/w500/w997799.jpg" }, // Use actual poster path
+  { id: 15, title: "Blade Runner 2049", image: "https://image.tmdb.org/t/p/w500/gajva2L0vL0vL0vL0vL0vL0vL0v.jpg" },
+
+  // Page 3: Drama & Animated Favorites
+  { id: 16, title: "Everything Everywhere All At Once", image: "https://image.tmdb.org/t/p/w500/r7XifWPv9T9T9T9T9T9T9T9T9T9.jpg" },
+  { id: 17, title: "Puss in Boots: The Last Wish", image: "https://image.tmdb.org/t/p/w500/kuf6Eba0T9T9T9T9T9T9T9T9T9T.jpg" },
+  { id: 18, title: "The Whale", image: "https://image.tmdb.org/t/p/w500/j9T9T9T9T9T9T9T9T9T9T9T9T9T.jpg" },
+  { id: 19, title: "Top Gun: Maverick", image: "https://image.tmdb.org/t/p/w500/62HCnMoT9T9T9T9T9T9T9T9T9T9.jpg" },
+  { id: 20, title: "Parasite", image: "https://image.tmdb.org/t/p/w500/7IiTT9T9T9T9T9T9T9T9T9T9T9T.jpg" },
 ];
 
 export default movies;
