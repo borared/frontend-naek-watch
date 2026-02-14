@@ -37,7 +37,7 @@ export default function Navbar() {
 					បានមើល
 				</a>
 				<a
-					href="#"
+					href="/signup"
 					className="hover:text-gray-400 transition-colors font-Kantumruy text-[17px]"
 				>
 					គណនី
