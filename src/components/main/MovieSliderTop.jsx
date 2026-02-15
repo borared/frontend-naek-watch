@@ -4,7 +4,7 @@ import MovieCard from "../MovieCard";
 import movies from "../../data/movies";
 import { chunkArray } from "../../utils/pagination";
 
-const MovieSlider = () => {
+const MovieSliderTop = () => {
 	const [currentPage, setCurrentPage] = useState(0);
 
 	// Divide your movies into groups of 5
@@ -18,8 +18,8 @@ const MovieSlider = () => {
 		<div className="w-full bg-black p-8 font-sans">
 			{/* Header Section */}
 			<div className="flex justify-between items-end mb-6">
-				<h2 className="text-white text-2xl font-bold font-Kantumruy">កំពុងពេញនិយម</h2>
-				<button className="text-gray-400 text-sm hover:text-white transition">
+				<h2 className="text-white text-2xl font-bold font-Kantumruy">រឿងល្បីៗ</h2>
+				<button className="text-gray-400 text-[18px] hover:text-white transition">
 					More...
 				</button>
 			</div>
@@ -35,7 +35,7 @@ const MovieSlider = () => {
 				{/* Floating Next Button */}
 				<button
 					onClick={handleNext}
-					className="absolute -right-5 top-[40%] z-10 bg-white rounded-full p-2 shadow-xl opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110 active:scale-95"
+					className="absolute -right-5 top-[40%] z-10 bg-white rounded-full p-2 shadow-xl transition-all duration-300 hover:scale-110 active:scale-95"
 				>
 					<ChevronRight className="w-6 h-6 text-black" strokeWidth={3} />
 				</button>
@@ -59,4 +59,4 @@ const MovieSlider = () => {
 	);
 };
 
-export default MovieSlider;
+export default MovieSliderTop;
