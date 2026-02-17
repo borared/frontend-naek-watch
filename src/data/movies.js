@@ -267,6 +267,28 @@ const movies = [
 	{ id: 102, title: "Inception", type: "movie", image: "https://filmnoerden.dk/wp-content/uploads/2015/05/Inception.jpg", categories: ["trending"] },
 	{ id: 103, title: "John Wick: Chapter 4", type: "movie", image: "https://i.ebayimg.com/00/s/MTYwMFgxMDY2/z/SRgAAOSwXY9kNpU~/$_57.JPG?set_id=8800005007", categories: ["trending"] },
 	{ id: 104, title: "Oppenheimer", type: "movie", image: "https://m.media-amazon.com/images/M/MV5BN2JkMDc5MGQtZjg3YS00NmFiLWIyZmQtZTJmNTM5MjVmYTQ4XkEyXkFqcGc@._V1_.jpg", categories: ["trending"] },
+	{
+    id: 105,
+    title: "3 IDIOTS",
+    type: "movie",
+    categories: ["trending", "comedy", "drama"],
+    director: "DIRECTED BY RAJKUMAR HIRANI",
+    tagline: "CHASE EXCELLENCE, AND SUCCESS WILL FOLLOW",
+    videoUrl:
+        "https://www.youtube.com/embed/xvszmNXdM4w?autoplay=1&mute=1&controls=0&playlist=xvszmNXdM4w&loop=1",
+    trailerUrl: "https://www.youtube.com/watch?v=xvszmNXdM4w",
+    poster:
+        "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80",
+    backdrop:
+        "https://images.unsplash.com/photo-1541339907198-e08756ebafe3?auto=format&fit=crop&w=1400&q=80",
+    image:
+        "https://m.media-amazon.com/images/M/MV5BNzc4ZWQ3NmYtODE0Ny00YTQ4LTlkZWItNTBkMGQ0MmUwMmJlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+    year: "2009",
+    rating: "8.4",
+    duration: "2h 50m",
+    synopsis: "Two friends embark on a quest for a lost buddy. On this journey, they encounter a long forgotten bet, a wedding they must crash, and a funeral that goes impossibly out of control, as they recall their college days with the free-spirited Rancho.",
+    accent: "bg-yellow-500",
+},
 
 	// Upcoming
 	{ id: 1000, title: "Avengers: Doomsday", type: "movie", image: "https://m.media-amazon.com/images/M/MV5BM2E1ZTJiZTgtZGI2Zi00MzAxLThhZjktMmU3M2E3Yzk3NjUxXkEyXkFqcGc@._V1_.jpg", categories: ["upcoming"] },
