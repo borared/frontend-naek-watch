@@ -4,35 +4,51 @@ import MovieCard from "../MovieCard";
 import movies from "../../data/movies";
 import { chunkArray } from "../../utils/pagination";
 
-const MovieSliderUpcomming = () => {
+
+const MovieSlider = ({ category, title }) => {
     const [currentPage, setCurrentPage] = useState(0);
 
-    // Divide your movies into groups of 5
-    const moviePages = chunkArray(movies, 5);
+    // 1. Filter the movies first
+    const filteredMovies = movies.filter((movie) =>
+        movie.categories?.includes(category)
+    );
+
+    // 2. Define hasSeries BEFORE using it in chunkSize
+    const hasSeries = filteredMovies.some(
+        (movie) => movie.type === "series"
+    );
+
+    // 3. Now calculate chunkSize and pages
+    const chunkSize = hasSeries ? 3 : 5;
+    const moviePages = chunkArray(filteredMovies, chunkSize);
+
+    const columnsClass = hasSeries ? "grid-cols-3" : "grid-cols-5";
 
     const handleNext = () => {
         setCurrentPage((prev) => (prev + 1) % moviePages.length);
     };
 
+    if (filteredMovies.length === 0) return null;
+
     return (
         <div className="w-full bg-black p-8 font-sans">
-            {/* Header Section */}
             <div className="flex justify-between items-end mb-6">
-                <h2 className="text-white text-2xl font-bold font-Kantumruy">ឆាប់ៗនេះ</h2>
-                <button className="text-gray-400 text-[18px] hover:text-white transition">
-                    More...
+                <h2 className="text-white text-2xl font-bold font-Kantumruy">
+                    {title}
+                </h2>
+                <button className="text-gray-400 text-[18px] hover:text-white transition font-Kantumruy hover:cursor-pointer">
+                    ផ្សេងទៀត...
                 </button>
             </div>
 
-            {/* Slider Container */}
             <div className="relative group">
-                <div className="grid grid-cols-5 gap-4">
+                {/* FIXED: Use backticks for template literals */}
+                <div className={`grid ${columnsClass} gap-4`}>
                     {moviePages[currentPage]?.map((movie) => (
                         <MovieCard key={movie.id} movie={movie} />
                     ))}
                 </div>
 
-                {/* Floating Next Button */}
                 <button
                     onClick={handleNext}
                     className="absolute -right-5 top-[40%] z-10 bg-white rounded-full p-2 shadow-xl transition-all duration-300 hover:scale-110 active:scale-95"
@@ -41,7 +57,6 @@ const MovieSliderUpcomming = () => {
                 </button>
             </div>
 
-            {/* Pagination Indicators */}
             <div className="flex justify-center items-center gap-3 mt-12">
                 {moviePages.map((_, index) => (
                     <button
@@ -59,4 +74,4 @@ const MovieSliderUpcomming = () => {
     );
 };
 
-export default MovieSliderUpcomming;
+export default MovieSlider;
