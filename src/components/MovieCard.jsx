@@ -32,7 +32,7 @@ const MovieCard = ({ movie }) => {
       {!isSeries && (
         <div className="flex flex-col">
           <p className="text-gray-400 text-[15px] font-medium truncate">
-            <span className="text-white group-hover:text-red-500 transition-colors">
+            <span className="text-white hover:text-red-500 transition-colors">
               {movie.title}
             </span>
           </p>
