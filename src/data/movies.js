@@ -2,6 +2,7 @@ const movies = [
 	{
     id: 1,
     title: "AKIRA",
+	type: "movie",
     categories: ["top", "anime"],
     director: "DIRECTED BY KATSUHIRO OTOMO",
     tagline: "NEO-TOKYO IS ABOUT TO EXPLODE",
@@ -24,6 +25,7 @@ const movies = [
 	{
 		id: 2,
 		title: "DUNE",
+		type: "movie",
 		categories: ["top", "trending"],
 		director: "FROM DIRECTOR DENIS VILLENEUVE",
 		tagline: "IT BEGINS",
@@ -47,6 +49,7 @@ const movies = [
 	{
     id: 3,
     title: "AVENGERS: ENDGAME",
+	type: "movie",
     categories: ["top", "action"],
     director: "DIRECTED BY ANTHONY & JOE RUSSO",
     tagline: "AVENGE THE FALLEN",
@@ -70,6 +73,7 @@ const movies = [
 	{
 		id: 4,
 		title: "THE BATMAN",
+		type: "movie",
 		categories: ["trending"],
 		director: "FROM DIRECTOR MATT REEVES",
 		tagline: "UNMASK THE TRUTH",
@@ -92,6 +96,7 @@ const movies = [
 	{
     id: 5,
     title: "NOBODY",
+	type: "movie",
     categories: ["top", "trending", "animation", "fantasy"],
     director: "DIRECTED BY YU SHUI",
     tagline: "EVERY LITTLE DEMON HAS A BIG DREAM",
@@ -112,12 +117,15 @@ const movies = [
     },
 
 	
+
+	
 	
 
 	//Top Only Movie
 	{
     id: 6, // Adjust ID as needed for your list
     title: "AVATAR",
+	type: "movie",
     categories: ["top", "sci-fi"],
     director: "DIRECTED BY JAMES CAMERON",
     tagline: "ENTER THE WORLD",
@@ -139,6 +147,7 @@ const movies = [
 	
 	{
     id: 7,
+	type: "movie",
     title: "THE HOBBIT: THE DESOLATION OF SMAUG",
     categories: ["top", "adventure", "fantasy"],
     director: "DIRECTED BY PETER JACKSON",
@@ -160,6 +169,7 @@ const movies = [
     },
 	{
     id: 8,
+	type: "movie",
     title: "AVENGERS: INFINITY WAR",
     categories: ["top", "action"],
     director: "DIRECTED BY ANTHONY & JOE RUSSO",
@@ -182,6 +192,7 @@ const movies = [
 
 	{
     id: 9,
+	type: "movie",
     title: "KUNG FU HUSTLE",
     categories: ["top", "trending", "action", "comedy"],
     director: "DIRECTED BY STEPHEN CHOW",
@@ -204,6 +215,7 @@ const movies = [
 
 	{
     id: 10,
+	type: "movie",
     title: "SPIDER-MAN: INTO THE SPIDER-VERSE",
     categories: ["top", "animation", "action"],
     director: "DIRECTED BY BOB PERSICHETTI",
@@ -228,6 +240,7 @@ const movies = [
 
 	{
 		id: 11,
+		type: "movie",
 		title: "TOP GUN",
 		categories: ["top", "trending"],
 		director: "PRODUCED BY JERRY BRUCKHEIMER",
@@ -249,20 +262,156 @@ const movies = [
 	},
 
 	
-	
-
 	// Trending Only Movies
-	{ id: 101, title: "Spider-Man: Across the Spider-Verse", image: "https://cdn.marvel.com/content/1x/across_the_spider-verse.jpg", categories: ["trending"] },
-	{ id: 102, title: "Inception", image: "https://filmnoerden.dk/wp-content/uploads/2015/05/Inception.jpg", categories: ["trending"] },
-	{ id: 103, title: "John Wick: Chapter 4", image: "https://i.ebayimg.com/00/s/MTYwMFgxMDY2/z/SRgAAOSwXY9kNpU~/$_57.JPG?set_id=8800005007", categories: ["trending"] },
-	{ id: 104, title: "Oppenheimer", image: "https://m.media-amazon.com/images/M/MV5BN2JkMDc5MGQtZjg3YS00NmFiLWIyZmQtZTJmNTM5MjVmYTQ4XkEyXkFqcGc@._V1_.jpg", categories: ["trending"] },
+	{ id: 101, title: "Spider-Man: Across the Spider-Verse", type: "movie", image: "https://cdn.marvel.com/content/1x/across_the_spider-verse.jpg", categories: ["trending"] },
+	{ id: 102, title: "Inception", type: "movie", image: "https://filmnoerden.dk/wp-content/uploads/2015/05/Inception.jpg", categories: ["trending"] },
+	{ id: 103, title: "John Wick: Chapter 4", type: "movie", image: "https://i.ebayimg.com/00/s/MTYwMFgxMDY2/z/SRgAAOSwXY9kNpU~/$_57.JPG?set_id=8800005007", categories: ["trending"] },
+	{ id: 104, title: "Oppenheimer", type: "movie", image: "https://m.media-amazon.com/images/M/MV5BN2JkMDc5MGQtZjg3YS00NmFiLWIyZmQtZTJmNTM5MjVmYTQ4XkEyXkFqcGc@._V1_.jpg", categories: ["trending"] },
 
 	// Upcoming
-	{ id: 1000, title: "Avengers: Doomsday", image: "https://m.media-amazon.com/images/M/MV5BM2E1ZTJiZTgtZGI2Zi00MzAxLThhZjktMmU3M2E3Yzk3NjUxXkEyXkFqcGc@._V1_.jpg", categories: ["upcoming"] },
-	{ id: 1001, title: "Spider-Man: Brand New Day", image: "https://preview.redd.it/just-made-this-concept-poster-for-spider-man-brand-new-day-v0-svwcepqv2nhf1.jpeg?auto=webp&s=a10f9a661b70bd0d1563bd20f1017290c54eed5f", categories: ["upcoming"] },
-	{ id: 1002, title: "The Odyssey", image: "https://m.media-amazon.com/images/M/MV5BN2MyYjk2MWMtODMyZS00MDUyLWE0OGQtOTQ3MGY0MDE0ZjVmXkEyXkFqcGc@._V1_.jpg", categories: ["upcoming"] },
-	{ id: 1003, title: "Supergirl", image: "https://m.media-amazon.com/images/M/MV5BZmYzN2VhNTAtYWUxZi00OTNiLWIyZDgtMGMxZTNlYzM3ZmE1XkEyXkFqcGc@._V1_.jpg", categories: ["upcoming"] },
-	{ id: 1004, title: "Project Hail Mary", image: "https://preview.redd.it/official-poster-for-project-hail-mary-starring-ryan-gosling-v0-l0fgrigwwg9f1.jpeg?auto=webp&s=720c32d237547ffc3f5d64b2b38b2956aa261e70", categories: ["upcoming"] },
+	{ id: 1000, title: "Avengers: Doomsday", type: "movie", image: "https://m.media-amazon.com/images/M/MV5BM2E1ZTJiZTgtZGI2Zi00MzAxLThhZjktMmU3M2E3Yzk3NjUxXkEyXkFqcGc@._V1_.jpg", categories: ["upcoming"] },
+	{ id: 1001, title: "Spider-Man: Brand New Day", type: "movie", image: "https://preview.redd.it/just-made-this-concept-poster-for-spider-man-brand-new-day-v0-svwcepqv2nhf1.jpeg?auto=webp&s=a10f9a661b70bd0d1563bd20f1017290c54eed5f", categories: ["upcoming"] },
+	{ id: 1002, title: "The Odyssey", type: "movie", image: "https://m.media-amazon.com/images/M/MV5BN2MyYjk2MWMtODMyZS00MDUyLWE0OGQtOTQ3MGY0MDE0ZjVmXkEyXkFqcGc@._V1_.jpg", categories: ["upcoming"] },
+	{ id: 1003, title: "Supergirl", type: "movie", image: "https://m.media-amazon.com/images/M/MV5BZmYzN2VhNTAtYWUxZi00OTNiLWIyZDgtMGMxZTNlYzM3ZmE1XkEyXkFqcGc@._V1_.jpg", categories: ["upcoming"] },
+	{ id: 1004, title: "Project Hail Mary", type: "movie", image: "https://preview.redd.it/official-poster-for-project-hail-mary-starring-ryan-gosling-v0-l0fgrigwwg9f1.jpeg?auto=webp&s=720c32d237547ffc3f5d64b2b38b2956aa261e70", categories: ["upcoming"] },
+
+
+	//Tv-series
+	{
+    id: 2000,
+    title: "STRANGER THINGS",
+    type: "series",
+    categories: ["series", "sci-fi", "horror"],
+    director: "CREATED BY THE DUFFER BROTHERS",
+    tagline: "ONE SUMMER CAN CHANGE EVERYTHING",
+    videoUrl:
+        "https://www.youtube.com/embed/b9EkMc79ZSU?autoplay=1&mute=1&controls=0&playlist=b9EkMc79ZSU&loop=1",
+    trailerUrl: "https://www.youtube.com/watch?v=b9EkMc79ZSU",
+    poster:
+        "https://images.unsplash.com/photo-1594909122845-11baa439b7bf?auto=format&fit=crop&w=800&q=80",
+    backdrop:
+        "https://images.unsplash.com/photo-1505635330303-31953c29b04f?auto=format&fit=crop&w=1400&q=80",
+    image:
+        "https://www.fangoria.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2025/07/Screenshot-2025-07-15-at-16.48.42.png.webp",
+    year: "2016 - 2025",
+    rating: "8.7",
+    duration: "4 Seasons",
+    synopsis: "When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl.",
+    accent: "bg-red-900",
+    },
+
+	{
+    id: 2001,
+    title: "CYBERPUNK: EDGERUNNERS",
+    type: "series",
+    categories: ["series", "anime", "sci-fi"],
+    director: "DIRECTED BY HIROYUKI IMAISHI",
+    tagline: "STAY AT YOUR HOUSE",
+    videoUrl:
+        "https://www.youtube.com/embed/ax5YUmkWf_Y?autoplay=1&mute=1&controls=0&playlist=ax5YUmkWf_Y&loop=1",
+    trailerUrl: "https://www.youtube.com/watch?v=ax5YUmkWf_Y",
+    poster:
+        "https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=800&q=80",
+    backdrop:
+        "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1400&q=80",
+    image:
+        "https://static0.colliderimages.com/wordpress/wp-content/uploads/2022/06/ENUS_CyberpunkE_S1_Main_Horizontal_16x9_RGB_PRE.jpg",
+    year: "2022",
+    rating: "8.6",
+    duration: "10 Episodes",
+    synopsis: "In a dystopia riddled with corruption and cybernetic implants, a talented but reckless street kid strives to become a mercenary outlaw — an edgerunner.",
+    accent: "bg-yellow-400",
+    },
+
+	{
+    id: 2002,
+    title: "LOKI",
+    type: "series",
+    categories: ["series", "sci-fi", "adventure"],
+    director: "CREATED BY MICHAEL WALDRON",
+    tagline: "HIS TIME HAS COME",
+    videoUrl:
+        "https://www.youtube.com/embed/dug56u8NN7g?autoplay=1&mute=1&controls=0&playlist=dug56u8NN7g&loop=1",
+    trailerUrl: "https://www.youtube.com/watch?v=dug56u8NN7g",
+    poster:
+        "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?auto=format&fit=crop&w=800&q=80",
+    backdrop:
+        "https://images.unsplash.com/photo-1635863138275-d9b33299680b?auto=format&fit=crop&w=1400&q=80",
+    image:
+        "https://thecosmiccircus.com/wp-content/uploads/2023/05/Untitled_design_4.jpg",
+    year: "2021 - 2023",
+    rating: "8.2",
+    duration: "2 Seasons",
+    synopsis: "The mercurial villain Loki resumes his role as the God of Mischief in a new series that takes place after the events of 'Avengers: Endgame.'",
+    accent: "bg-emerald-600",
+    },
+	{
+    id: 2003,
+    title: "THE BOYS",
+    type: "series",
+    categories: ["series", "action", "satire"],
+    director: "CREATED BY ERIC KRIPKE",
+    tagline: "NEVER MEET YOUR HEROES",
+    videoUrl:
+        "https://www.youtube.com/embed/M1bhOaLv4FU?autoplay=1&mute=1&controls=0&playlist=M1bhOaLv4FU&loop=1",
+    trailerUrl: "https://www.youtube.com/watch?v=M1bhOaLv4FU",
+    poster:
+        "https://images.unsplash.com/photo-1594909122845-11baa439b7bf?auto=format&fit=crop&w=800&q=80",
+    backdrop:
+        "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?auto=format&fit=crop&w=1400&q=80",
+    image:
+        "https://assets.aboutamazon.com/68/98/94061820499588f9972df61a059b/rh-full-width-inline-2550x1434.jpg",
+    year: "2019 - 2026",
+    rating: "8.7",
+    duration: "4 Seasons",
+    synopsis: "A group of vigilantes set out to take down corrupt superheroes who abuse their superpowers. It's the powerless against the super-powerful as 'The Boys' embark on a quest to expose the truth about The Seven.",
+    accent: "bg-blue-900",
+    },
+	{
+    id: 2004,
+    title: "JUJUTSU KAISEN",
+    type: "series",
+    categories: ["series", "anime", "action", "dark fantasy"],
+    director: "DIRECTED BY SUNGOO PARK / SHOTA GOSHOZONO",
+    tagline: "CURSE THE FATE THAT BINDS YOU",
+    videoUrl:
+        "https://www.youtube.com/embed/ruX3rIj3--w?autoplay=1&mute=1&controls=0&playlist=ruX3rIj3--w&loop=1",
+    trailerUrl: "https://www.youtube.com/watch?v=ruX3rIj3--w",
+    poster:
+        "https://images.unsplash.com/photo-1618336753974-aae8e04506aa?auto=format&fit=crop&w=800&q=80",
+    backdrop:
+        "https://images.unsplash.com/photo-1578632292335-df3abbb0d586?auto=format&fit=crop&w=1400&q=80",
+    image:
+        "https://5.imimg.com/data5/ANDROID/Default/2023/4/298334358/UV/IR/QX/15232517/product-jpeg-500x500.jpg",
+    year: "2020 - 2026",
+    rating: "8.6",
+    duration: "3 Seasons",
+    synopsis: "A boy swallows a cursed talisman - the finger of a demon - and becomes cursed himself. He enters a shaman's school to be able to locate the demon's other body parts and thus exorcise himself.",
+    accent: "bg-indigo-900",
+    },
+	{
+    id: 2005,
+    title: "HOUSE OF THE DRAGON",
+    type: "series",
+    categories: ["series", "fantasy", "drama", "action"],
+    director: "CREATED BY RYAN CONDAL & GEORGE R.R. MARTIN",
+    tagline: "NOTHING BURNS LIKE BETRAYAL",
+    videoUrl:
+        "https://www.youtube.com/embed/W7exuTzZj8Q?autoplay=1&mute=1&controls=0&playlist=W7exuTzZj8Q&loop=1",
+    trailerUrl: "https://www.youtube.com/watch?v=W7exuTzZj8Q",
+    poster:
+        "https://images.unsplash.com/photo-1599713191065-4558079a93f8?auto=format&fit=crop&w=800&q=80",
+    backdrop:
+        "https://images.unsplash.com/photo-1514539079130-25950c84af65?auto=format&fit=crop&w=1400&q=80",
+    image:
+        "https://www.digitalstudiome.com/cloud/2022/08/18/house-of-the-dragon-ka-1920.jpg",
+    year: "2022 - 2026",
+    rating: "8.4",
+    duration: "3 Seasons",
+    synopsis: "Two hundred years before the events of Game of Thrones, the House Targaryen is at the height of its power. However, the seeds of a bloody civil war known as the 'Dance of the Dragons' are sown when King Viserys breaks tradition to name his daughter heir.",
+    accent: "bg-red-800",
+    }
+
 ];
 
 export default movies;
