@@ -4,18 +4,27 @@ import Signup from "./signup/Signup.jsx";
 import Main from "./Page/Main.jsx";
 import Footer from "./components/Footer.jsx";
 import MoviePage from "./moviedisplay/MoviePage.jsx";
+import Store from "./Page/Store.jsx";
+import Tasks from "./Page/Tasks.jsx";
 
 export default function App() {
-	return (
-		<BrowserRouter>
-			<Navbar />
-			<Routes>
-				<Route path="/" element={<Main />} />
-				<Route path="/signup" element={<Signup />} />
+    return (
+        <BrowserRouter>
+            {/* Navbar is fixed, so it stays at the top */}
+            <Navbar />
 
-				<Route path="/movie/:id" element={<MoviePage />} />
-			</Routes>
-			<Footer />
-		</BrowserRouter>
-	);
+            {/* This wrapper ensures content starts below the navbar */}
+            <main className="pt-15 min-h-screen bg-black">
+                <Routes>
+                    <Route path="/" element={<Main />} />
+                    <Route path="/signup" element={<Signup />} />
+                    <Route path="/movie/:id" element={<MoviePage />} />
+					<Route path="/store" element={<Store />} />
+					<Route path="/missions" element={<Tasks />} />
+                </Routes>
+            </main>
+
+            <Footer />
+        </BrowserRouter>
+    );
 }

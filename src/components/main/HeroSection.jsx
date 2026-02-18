@@ -79,7 +79,7 @@ const HeroSection = () => {
 						>
 							<button className="px-10 bg-white text-black font-bold text-[15px] hover:scale-105 transition-transform duration-200 font-Kantumruy hover:cursor-pointer">
 								<Link to={`/movie/${heroMovies[index].id}`}>
-									ទស្សនាឈុតខ្លីៗ
+									ទស្សនាឥឡូវនេះ
 								</Link>
 							</button>
 
