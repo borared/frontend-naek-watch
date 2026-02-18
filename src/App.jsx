@@ -4,6 +4,7 @@ import Signup from "./signup/Signup.jsx";
 import Main from "./Page/Main.jsx";
 import Footer from "./components/Footer.jsx";
 import MoviePage from "./moviedisplay/MoviePage.jsx";
+import Store from "./Page/Store.jsx"
 
 export default function App() {
     return (
@@ -17,6 +18,7 @@ export default function App() {
                     <Route path="/" element={<Main />} />
                     <Route path="/signup" element={<Signup />} />
                     <Route path="/movie/:id" element={<MoviePage />} />
+					<Route path="/store" element={<Store />} />
                 </Routes>
             </main>
 

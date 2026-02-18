@@ -25,6 +25,9 @@ export default function Navbar() {
                 <Link to="/watchlist" className="hover:text-gray-400 transition-colors font-Kantumruy text-[17px]">
                     បានមើល
                 </Link>
+				<Link to="/store" className="hover:text-gray-400 transition-colors font-Kantumruy text-[17px]">
+                    ហាង
+                </Link>
                 <Link to="/signup" className="hover:text-gray-400 transition-colors font-Kantumruy text-[17px]">
                     គណនី
                 </Link>
