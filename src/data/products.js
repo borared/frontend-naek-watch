@@ -11,7 +11,7 @@ const products = [
     name: "Limited Edition Keychain Superman",
     image:
       "https://www.wearefanattik.com/cdn/shop/files/Z-DC88-Lifestyle-1.jpg?v=1750156973&width=1445",
-    points: 400,
+    points: 300,
   },
   {
     id: 3,

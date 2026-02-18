@@ -1,47 +1,5 @@
 import React from "react";
-
-const tasks = [
-  {
-    id: 1,
-    title: "7-Day Watch Streak",
-    description: "Watch 1 movie daily for 7 days",
-    reward: 200,
-    progress: 4,
-    total: 7,
-  },
-  {
-    id: 2,
-    title: "Horror Explorer",
-    description: "Watch 5 Horror movies",
-    reward: 150,
-    progress: 2,
-    total: 5,
-  },
-  {
-    id: 3,
-    title: "Sci-Fi Fan",
-    description: "Watch 5 Sci-Fi movies",
-    reward: 150,
-    progress: 5,
-    total: 5,
-  },
-  {
-    id: 4,
-    title: "Big Spender",
-    description: "Purchase 30 movies",
-    reward: 800,
-    progress: 12,
-    total: 30,
-  },
-  {
-    id: 5,
-    title: "Series Binger",
-    description: "Finish 3 full series",
-    reward: 400,
-    progress: 1,
-    total: 3,
-  },
-];
+import tasks from "../data/tasks";
 
 export default function Tasks() {
   return (
