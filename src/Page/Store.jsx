@@ -33,7 +33,7 @@ export default function Store() {
         {products.map((item) => (
           <div
             key={item.id}
-            className="bg-neutral-900 rounded-2xl overflow-hidden shadow-lg border border-white/5 hover:border-red-600 transition-all duration-300 group"
+            className="bg-neutral-900 rounded-2xl overflow-hidden shadow-lg border border-white/5 hover:border-gray-400 transition-all duration-300 group"
           >
             <div className="aspect-square overflow-hidden">
               <img
