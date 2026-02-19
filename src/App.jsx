@@ -1,15 +1,14 @@
 import React from "react";
-import Navbar from "./components/Navbar.jsx";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Signup from "./signup/Signup.jsx";
-import Footer from "./components/Footer.jsx";
 import Signin from "./signup/Signin.jsx";
 
 export default function App() {
 	return (
-		<div>
-			{/* <Navbar /> */}
-			<Signup />
-			<Signin />
-		</div>
+		<Routes>
+			<Route path="/" element={<Navigate to="/signin" replace />} />
+			<Route path="/signin" element={<Signin />} />
+			<Route path="/signup" element={<Signup />} />
+		</Routes>
 	);
 };
