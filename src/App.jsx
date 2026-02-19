@@ -6,25 +6,28 @@ import Footer from "./components/Footer.jsx";
 import MoviePage from "./moviedisplay/MoviePage.jsx";
 import Store from "./Page/Store.jsx";
 import Tasks from "./Page/Tasks.jsx";
+import RedeemCheckout from "./Page/RedeemCheckout.jsx";
+import { UserProvider } from "./context/UserContext";
 
 export default function App() {
     return (
-        <BrowserRouter>
-            {/* Navbar is fixed, so it stays at the top */}
-            <Navbar />
+        <UserProvider>
+            <BrowserRouter>
+                <Navbar />
 
-            {/* This wrapper ensures content starts below the navbar */}
-            <main className="pt-15 min-h-screen bg-black">
-                <Routes>
-                    <Route path="/" element={<Main />} />
-                    <Route path="/signup" element={<Signup />} />
-                    <Route path="/movie/:id" element={<MoviePage />} />
-					<Route path="/store" element={<Store />} />
-					<Route path="/missions" element={<Tasks />} />
-                </Routes>
-            </main>
+                <main className="pt-15 min-h-screen bg-black">
+                    <Routes>
+                        <Route path="/" element={<Main />} />
+                        <Route path="/signup" element={<Signup />} />
+                        <Route path="/movie/:id" element={<MoviePage />} />
+                        <Route path="/store" element={<Store />} />
+                        <Route path="/missions" element={<Tasks />} />
+                        <Route path="/redeem-checkout" element={<RedeemCheckout />} />
+                    </Routes>
+                </main>
 
-            <Footer />
-        </BrowserRouter>
+                <Footer />
+            </BrowserRouter>
+        </UserProvider>
     );
 }
