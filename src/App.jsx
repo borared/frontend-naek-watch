@@ -6,6 +6,7 @@ import Footer from "./components/Footer.jsx";
 import MoviePage from "./moviedisplay/MoviePage.jsx";
 import Store from "./Page/Store.jsx";
 import Tasks from "./Page/Tasks.jsx";
+import RedeemCheckout from "./Page/RedeemCheckout.jsx";
 
 export default function App() {
     return (
@@ -21,6 +22,7 @@ export default function App() {
                     <Route path="/movie/:id" element={<MoviePage />} />
 					<Route path="/store" element={<Store />} />
 					<Route path="/missions" element={<Tasks />} />
+                    <Route path="/redeem-checkout" element={<RedeemCheckout />} />
                 </Routes>
             </main>
 

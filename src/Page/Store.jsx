@@ -1,20 +1,31 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import products from "../data/products";
 import { redeemItem } from "../utils/redeem";
 
 export default function Store() {
-  const [userPoints, setUserPoints] = useState(350);
+  const navigate = useNavigate();
+
+  const [userPoints] = useState(350); // will deduct after checkout
   const [showModal, setShowModal] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
-  const [isSuccess, setIsSuccess] = useState(false);
 
   const handleRedeem = (item) => {
     const result = redeemItem(userPoints, item.points);
 
-    setModalMessage(result.message);
-    setIsSuccess(result.success);
-    setUserPoints(result.remainingPoints);
-    setShowModal(true);
+    if (!result.success) {
+      setModalMessage(result.message);
+      setShowModal(true);
+      return;
+    }
+
+    // Navigate to checkout page if enough points
+    navigate("/redeem-checkout", {
+      state: {
+        item,
+        userPoints,
+      },
+    });
   };
 
   return (
@@ -82,17 +93,13 @@ export default function Store() {
         ))}
       </div>
 
-      {/* Modal (same as before) */}
+      {/* Custom Modal for insufficient points */}
       {showModal && (
         <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50">
           <div className="bg-neutral-900 border border-white/10 rounded-2xl p-8 w-[350px] text-center shadow-2xl">
             
-            <h2
-              className={`text-2xl font-bold mb-4 ${
-                isSuccess ? "text-green-500" : "text-red-500"
-              }`}
-            >
-              {isSuccess ? "Success" : "Not Enough Points"}
+            <h2 className="text-2xl font-bold mb-4 text-red-500">
+              Not Enough Points
             </h2>
 
             <p className="text-gray-300 mb-6">
