@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { UserContext } from "../context/UserContext";
+
 
 export default function RedeemCheckout() {
   const location = useLocation();
   const navigate = useNavigate();
-
+  const { deductPoints } = useContext(UserContext);
   const { item, userPoints } = location.state || {};
 
   const [formData, setFormData] = useState({
@@ -33,6 +36,7 @@ export default function RedeemCheckout() {
 
     alert("Order submitted successfully! 🎉");
 
+    deductPoints(item.points);
     navigate("/store");
   };
 

@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import products from "../data/products";
 import { redeemItem } from "../utils/redeem";
+import { useContext } from "react";
+import { UserContext } from "../context/UserContext"
+
 
 export default function Store() {
   const navigate = useNavigate();
-
-  const [userPoints] = useState(350); // will deduct after checkout
+  const { userPoints } = useContext(UserContext);
+  
   const [showModal, setShowModal] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
 
