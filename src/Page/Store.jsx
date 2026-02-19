@@ -1,7 +1,22 @@
-import React from "react";
-import products from "../data/products"
+import React, { useState } from "react";
+import products from "../data/products";
+import { redeemItem } from "../utils/redeem";
 
 export default function Store() {
+  const [userPoints, setUserPoints] = useState(350);
+  const [showModal, setShowModal] = useState(false);
+  const [modalMessage, setModalMessage] = useState("");
+  const [isSuccess, setIsSuccess] = useState(false);
+
+  const handleRedeem = (item) => {
+    const result = redeemItem(userPoints, item.points);
+
+    setModalMessage(result.message);
+    setIsSuccess(result.success);
+    setUserPoints(result.remainingPoints);
+    setShowModal(true);
+  };
+
   return (
     <div className="min-h-screen bg-black text-white pt-10 px-8">
       
@@ -18,13 +33,15 @@ export default function Store() {
       {/* Points Display */}
       <div className="mb-12 flex justify-between items-center bg-neutral-900 p-6 rounded-xl border border-white/10">
         <div>
-          <h2 className="text-[25px] font-bold​ font-Kantumruy">ពិន្ទុរបស់អ្នក</h2>
+          <h2 className="text-[25px] font-bold font-Kantumruy">
+            ពិន្ទុរបស់អ្នក
+          </h2>
           <p className="text-gray-400 text-sm">
             Earn more points by doing tasks
           </p>
         </div>
         <div className="text-3xl font-bold text-yellow-400">
-          2,350 PTS
+          {userPoints} PTS
         </div>
       </div>
 
@@ -53,7 +70,10 @@ export default function Store() {
                   {item.points} PTS
                 </span>
 
-                <button className="bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg text-sm font-semibold transition-all hover:cursor-pointer">
+                <button
+                  onClick={() => handleRedeem(item)}
+                  className="bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg text-sm font-semibold transition-all hover:cursor-pointer"
+                >
                   Redeem
                 </button>
               </div>
@@ -62,7 +82,33 @@ export default function Store() {
         ))}
       </div>
 
-      {/* Bottom spacing */}
+      {/* Modal (same as before) */}
+      {showModal && (
+        <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50">
+          <div className="bg-neutral-900 border border-white/10 rounded-2xl p-8 w-[350px] text-center shadow-2xl">
+            
+            <h2
+              className={`text-2xl font-bold mb-4 ${
+                isSuccess ? "text-green-500" : "text-red-500"
+              }`}
+            >
+              {isSuccess ? "Success" : "Not Enough Points"}
+            </h2>
+
+            <p className="text-gray-300 mb-6">
+              {modalMessage}
+            </p>
+
+            <button
+              onClick={() => setShowModal(false)}
+              className="bg-red-600 hover:bg-red-700 px-6 py-2 rounded-lg font-semibold transition-all"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+
       <div className="h-20"></div>
     </div>
   );
