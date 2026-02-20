@@ -25,7 +25,7 @@ export default function Tasks() {
           return (
             <div
               key={task.id}
-              className="bg-neutral-900 rounded-2xl p-6 border border-white/10 hover:border-gray-400 transition-all duration-300"
+              className="bg-neutral-900 rounded-2xl p-6 border border-white/10  transition-all duration-300"
             >
               <h2 className="text-xl font-semibold mb-2">
                 {task.title}
