@@ -86,8 +86,8 @@ export default function Store() {
 					<h2 className="text-[25px] font-bold font-Kantumruy">
 						ពិន្ទុរបស់អ្នក
 					</h2>
-					<p className="text-gray-400 text-sm">
-						Earn more points by doing tasks
+					<p className="text-gray-400 text-[18px] font-Kantumruy">
+						ទទួលបានពិន្ទុដោយការធ្វើបេសកកម្ម
 					</p>
 				</div>
 
@@ -107,7 +107,7 @@ export default function Store() {
 					</h2>
 
 					{orders.length === 0 ? (
-						<p className="text-gray-400">You haven’t redeemed anything yet.</p>
+						<p className="text-gray-400 text-[18px] font-Kantumruy">លោកអ្នកមិនទាន់ធ្វើការកម្មង់អ្វីនៅឡើយទេ</p>
 					) : (
 						<div className="space-y-4">
 							{orders.map((order) => (

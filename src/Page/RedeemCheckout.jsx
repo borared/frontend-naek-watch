@@ -70,7 +70,7 @@ export default function RedeemCheckout() {
 				{/* Form */}
 				<form onSubmit={handleSubmit} className="space-y-4">
 					<div>
-						<label className="block text-sm mb-1">Full Name *</label>
+						<label className="block text-[18px] mb-1 font-Kantumruy">ឈ្មោះពេញ *</label>
 						<input
 							type="text"
 							name="fullName"
@@ -81,7 +81,7 @@ export default function RedeemCheckout() {
 					</div>
 
 					<div>
-						<label className="block text-sm mb-1">Phone Number *</label>
+						<label className="block text-[18px] mb-1 font-Kantumruy">លេខទូរស័ព្ទ *</label>
 						<input
 							type="text"
 							name="phone"
@@ -92,7 +92,7 @@ export default function RedeemCheckout() {
 					</div>
 
 					<div>
-						<label className="block text-sm mb-1">Address *</label>
+						<label className="block text-[18px] mb-1 font-Kantumruy">អាស័យដ្ឋាន *</label>
 						<textarea
 							name="address"
 							value={formData.address}
@@ -103,7 +103,7 @@ export default function RedeemCheckout() {
 					</div>
 
 					<div>
-						<label className="block text-sm mb-1">City</label>
+						<label className="block text-[18px] mb-1​ font-Kantumruy">ទីក្រុង</label>
 						<input
 							type="text"
 							name="city"
@@ -115,9 +115,9 @@ export default function RedeemCheckout() {
 
 					<button
 						type="submit"
-						className="w-full bg-red-600 hover:bg-red-700 py-3 rounded-lg font-semibold transition-all"
+						className="w-full bg-red-600 hover:bg-red-700 py-3 rounded-lg font-semibold transition-all font-Kantumruy hover:cursor-pointer"
 					>
-						Confirm Redeem
+						បញ្ជាក់
 					</button>
 				</form>
 			</div>
