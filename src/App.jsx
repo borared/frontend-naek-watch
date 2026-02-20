@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar.jsx";
 import Signup from "./signup/Signup.jsx";
 import Main from "./Page/Main.jsx";
 import Footer from "./components/Footer.jsx";
-import MoviePage from "./moviedisplay/MoviePage.jsx";
+import MovieDetail from "./moviedisplay/MovieDetail.jsx";
 import Store from "./Page/Store.jsx";
 import Tasks from "./Page/Tasks.jsx";
 import RedeemCheckout from "./Page/RedeemCheckout.jsx";
@@ -19,7 +19,7 @@ export default function App() {
                     <Routes>
                         <Route path="/" element={<Main />} />
                         <Route path="/signup" element={<Signup />} />
-                        <Route path="/movie/:id" element={<MoviePage />} />
+                        <Route path="/movie/:id" element={<MovieDetail />} />
                         <Route path="/store" element={<Store />} />
                         <Route path="/missions" element={<Tasks />} />
                         <Route path="/redeem-checkout" element={<RedeemCheckout />} />
