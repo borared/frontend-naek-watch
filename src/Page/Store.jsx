@@ -36,27 +36,48 @@ export default function Store() {
 					NaekWatch Store
 				</h1>
 				<div className="flex justify-between">
-          <div class="flex items-center gap-2 mt-3">
-            <p class="text-gray-400 text-xl font-Kantumruy">
-              ប្តូរពិន្ទុរបស់អ្នកសម្រាប់របស់ពិសេស
-            </p>
-            <i class="bx bx-gift text-gray-400 text-xl" />
-          </div>
-          <div>
-            {/* Notification Button */}
-					<button
-						onClick={() => setShowOrders(!showOrders)}
-						className="relative bg-red-600 hover:bg-red-800 w-30 h-10 p-3 rounded-[10px] font-semibold transition-all hover:cursor-pointer"
-					>
-						Order List
-						{orders.length > 0 && (
-							<span className="absolute -top-2 -right-2 bg-red-600 text-xs px-2 py-0.5 rounded-full">
-								{orders.length}
-							</span>
-						)}
-					</button>    
-          </div>
-        </div>
+					<div class="flex items-center gap-2 mt-3">
+						<p class="text-gray-400 text-xl font-Kantumruy">
+							ប្តូរពិន្ទុរបស់អ្នកសម្រាប់របស់ពិសេស
+						</p>
+						<i class="bx bx-gift text-gray-400 text-xl" />
+					</div>
+					<div>
+						{/* Notification Button */}
+						<div>
+							{/* The Button */}
+							<button
+								onClick={() => setShowOrders(!showOrders)}
+								className="relative flex items-center justify-center bg-red-600 hover:bg-red-800 w-32 h-10 rounded-[10px] font-semibold transition-all active:scale-95 hover:cursor-pointer text-white"
+							>
+								Order List
+								{orders.length > 0 && (
+									<span className="absolute -top-2 -right-2 bg-red-600 border border-white text-xs px-2 py-0.5 rounded-full">
+										{orders.length}
+									</span>
+								)}
+							</button>
+
+							{/* The Smooth Content */}
+							<div
+								className={`transition-all duration-300 ease-in-out overflow-hidden ${
+									showOrders
+										? "max-h-[500px] opacity-100 mt-4"
+										: "max-h-0 opacity-0 mt-0"
+								}`}
+							>
+								<div className="p-4  rounded-lg ">
+									{/* Your actual Order List content goes here */}
+									{orders.map((order, index) => (
+										<div key={index} className="py-1">
+											Order #{index + 1}
+										</div>
+									))}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 
 			{/* Points + Notification */}
@@ -71,8 +92,6 @@ export default function Store() {
 				</div>
 
 				<div className="flex items-center gap-6">
-					
-
 					{/* Points */}
 					<div className="text-3xl font-bold text-yellow-400">
 						{userPoints} PTS
@@ -83,11 +102,13 @@ export default function Store() {
 			{/* Orders Panel */}
 			{showOrders && (
 				<div className="mb-12 bg-neutral-900 border border-white/10 rounded-2xl p-6 shadow-2xl animate-fadeIn">
-					<h2 className="text-2xl font-semibold text-red-500 mb-6">Your Orders</h2>
+					<h2 className="text-2xl font-semibold text-white mb-6 font-Kantumruy">
+						ការកម្មង់របស់អ្នក
+					</h2>
 
 					{orders.length === 0 ? (
 						<p className="text-gray-400">You haven’t redeemed anything yet.</p>
-					) : (   
+					) : (
 						<div className="space-y-4">
 							{orders.map((order) => (
 								<div
@@ -105,6 +126,10 @@ export default function Store() {
 										<p>
 											<span className="text-white">Name:</span>{" "}
 											{order.formData.fullName}
+										</p>
+										<p>
+											<span className="text-white">Phone:</span>{" "}
+											{order.formData.phone}
 										</p>
 										<p>
 											<span className="text-white">Address:</span>{" "}
