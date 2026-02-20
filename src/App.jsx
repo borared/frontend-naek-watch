@@ -8,6 +8,7 @@ import Store from "./Page/Store.jsx";
 import Tasks from "./Page/Tasks.jsx";
 import RedeemCheckout from "./Page/RedeemCheckout.jsx";
 import { UserProvider } from "./context/UserContext";
+import MoviesPage from "./Page/MoviePage.jsx";
 
 export default function App() {
     return (
@@ -20,6 +21,7 @@ export default function App() {
                         <Route path="/" element={<Main />} />
                         <Route path="/signup" element={<Signup />} />
                         <Route path="/movie/:id" element={<MovieDetail />} />
+                        <Route path="/movies" element={<MoviesPage />} />
                         <Route path="/store" element={<Store />} />
                         <Route path="/missions" element={<Tasks />} />
                         <Route path="/redeem-checkout" element={<RedeemCheckout />} />
