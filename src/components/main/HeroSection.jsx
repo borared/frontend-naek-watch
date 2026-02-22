@@ -42,7 +42,7 @@ const HeroSection = () => {
             <div className="mt-10 flex gap-4">
               <Link
                 to={`/movie/${heroMovies[index].id}`}
-                className="px-10 py-4 bg-white text-black font-bold"
+                className="px-10 py-4 bg-white text-black font-bold font-Kantumruy"
               >
                 ទស្សនាឥឡូវនេះ
               </Link>
