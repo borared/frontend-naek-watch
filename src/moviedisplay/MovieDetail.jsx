@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import MovieLayout from "./MovieLayout.jsx";
 import movies from "../data/movies.js";
 
-export default function MoviePage() {
+export default function MovieDetail() {
 	const { id } = useParams();
 	const navigate = useNavigate();
 
