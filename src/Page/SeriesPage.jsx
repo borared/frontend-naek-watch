@@ -55,7 +55,7 @@ export default function SeriesPage() {
           All Series
         </h2>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
           {seriesList.map((item) => (
             <Link key={item.id} to={`/movie/${item.id}`}>
               <MovieCard movie={item} />
