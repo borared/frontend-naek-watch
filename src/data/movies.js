@@ -291,11 +291,11 @@ const movies = [
 },
 
 	// Upcoming
-	{ id: 1000, title: "Avengers: Doomsday", type: "movie", image: "https://m.media-amazon.com/images/M/MV5BM2E1ZTJiZTgtZGI2Zi00MzAxLThhZjktMmU3M2E3Yzk3NjUxXkEyXkFqcGc@._V1_.jpg", categories: ["upcoming"] },
-	{ id: 1001, title: "Spider-Man: Brand New Day", type: "movie", image: "https://preview.redd.it/just-made-this-concept-poster-for-spider-man-brand-new-day-v0-svwcepqv2nhf1.jpeg?auto=webp&s=a10f9a661b70bd0d1563bd20f1017290c54eed5f", categories: ["upcoming"] },
-	{ id: 1002, title: "The Odyssey", type: "movie", image: "https://m.media-amazon.com/images/M/MV5BN2MyYjk2MWMtODMyZS00MDUyLWE0OGQtOTQ3MGY0MDE0ZjVmXkEyXkFqcGc@._V1_.jpg", categories: ["upcoming"] },
-	{ id: 1003, title: "Supergirl", type: "movie", image: "https://m.media-amazon.com/images/M/MV5BZmYzN2VhNTAtYWUxZi00OTNiLWIyZDgtMGMxZTNlYzM3ZmE1XkEyXkFqcGc@._V1_.jpg", categories: ["upcoming"] },
-	{ id: 1004, title: "Project Hail Mary", type: "movie", image: "https://preview.redd.it/official-poster-for-project-hail-mary-starring-ryan-gosling-v0-l0fgrigwwg9f1.jpeg?auto=webp&s=720c32d237547ffc3f5d64b2b38b2956aa261e70", categories: ["upcoming"] },
+	{ id: 1000, title: "Avengers: Doomsday", image: "https://m.media-amazon.com/images/M/MV5BM2E1ZTJiZTgtZGI2Zi00MzAxLThhZjktMmU3M2E3Yzk3NjUxXkEyXkFqcGc@._V1_.jpg", categories: ["upcoming"] },
+	{ id: 1001, title: "Spider-Man: Brand New Day", image: "https://preview.redd.it/just-made-this-concept-poster-for-spider-man-brand-new-day-v0-svwcepqv2nhf1.jpeg?auto=webp&s=a10f9a661b70bd0d1563bd20f1017290c54eed5f", categories: ["upcoming"] },
+	{ id: 1002, title: "The Odyssey", image: "https://m.media-amazon.com/images/M/MV5BN2MyYjk2MWMtODMyZS00MDUyLWE0OGQtOTQ3MGY0MDE0ZjVmXkEyXkFqcGc@._V1_.jpg", categories: ["upcoming"] },
+	{ id: 1003, title: "Supergirl",  image: "https://m.media-amazon.com/images/M/MV5BZmYzN2VhNTAtYWUxZi00OTNiLWIyZDgtMGMxZTNlYzM3ZmE1XkEyXkFqcGc@._V1_.jpg", categories: ["upcoming"] },
+	{ id: 1004, title: "Project Hail Mary", image: "https://preview.redd.it/official-poster-for-project-hail-mary-starring-ryan-gosling-v0-l0fgrigwwg9f1.jpeg?auto=webp&s=720c32d237547ffc3f5d64b2b38b2956aa261e70", categories: ["upcoming"] },
 
 
 	//Tv-series
