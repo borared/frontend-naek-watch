@@ -48,7 +48,7 @@ export default function Store() {
 							{/* The Button */}
 							<button
 								onClick={() => setShowOrders(!showOrders)}
-								className="relative flex items-center justify-center bg-red-600 hover:bg-red-800 w-32 h-10 rounded-[10px] font-semibold transition-all active:scale-95 hover:cursor-pointer text-white"
+								className="relative flex items-center justify-center bg-red-600 hover:bg-red-800 w-32 h-10 rounded-full font-semibold transition-all active:scale-95 hover:cursor-pointer text-white"
 							>
 								Order List
 								{orders.length > 0 && (
