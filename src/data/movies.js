@@ -432,6 +432,28 @@ const movies = [
     duration: "3 Seasons",
     synopsis: "Two hundred years before the events of Game of Thrones, the House Targaryen is at the height of its power. However, the seeds of a bloody civil war known as the 'Dance of the Dragons' are sown when King Viserys breaks tradition to name his daughter heir.",
     accent: "bg-red-800",
+    },
+    {
+    id: 2006,
+    title: "3 BODY PROBLEM",
+    type: "series",
+    categories: ["series", "sci-fi", "mystery", "drama"],
+    director: "CREATED BY DAVID BENIOFF, D.B. WEISS & ALEXANDER WOO",
+    tagline: "YOU ARE NOT ALONE",
+    videoUrl:
+        "https://www.youtube.com/embed/Y_JQ9PfYbGk?autoplay=1&mute=1&controls=0&playlist=Y_JQ9PfYbGk&loop=1",
+    trailerUrl: "https://www.youtube.com/watch?v=Y_JQ9PfYbGk",
+    poster:
+        "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=800&q=80",
+    backdrop:
+        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1400&q=80",
+    image:
+        "https://geekspin.co/wp-content/uploads/2024/03/3-Body-Problem.jpg",
+    year: "2024 - 2026",
+    rating: "7.8",
+    duration: "2 Seasons",
+    synopsis: "A young woman's fateful decision in 1960s China reverberates across space and time to a group of brilliant scientists in the present day. As the laws of nature unravel before their eyes, five former colleagues reunite to confront the greatest threat in humanity's history.",
+    accent: "bg-cyan-700",
     }
 
 ];
