@@ -454,7 +454,73 @@ const movies = [
     duration: "2 Seasons",
     synopsis: "A young woman's fateful decision in 1960s China reverberates across space and time to a group of brilliant scientists in the present day. As the laws of nature unravel before their eyes, five former colleagues reunite to confront the greatest threat in humanity's history.",
     accent: "bg-cyan-700",
-    }
+    },
+    {
+    id: 24,
+    title: "A KNIGHT OF THE SEVEN KINGDOMS",
+    type: "series",
+    categories: ["series", "fantasy", "adventure", "drama"],
+    director: "DIRECTED BY OWEN HARRIS",
+    tagline: "A TALL TALE THAT BECAME LEGEND",
+    videoUrl:
+        "https://www.youtube.com/embed/MJqU-CId30w?autoplay=1&mute=1&controls=0&playlist=MJqU-CId30w&loop=1",
+    trailerUrl: "https://www.youtube.com/watch?v=MJqU-CId30w",
+    poster:
+        "https://images.unsplash.com/photo-1599713191065-4558079a93f8?auto=format&fit=crop&w=800&q=80",
+    backdrop:
+        "https://images.unsplash.com/photo-1461360370896-922624d12aa1?auto=format&fit=crop&w=1400&q=80",
+    image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmjp2985XsAYKGigN3UwQZCeld8g-Cf5rNQg&s",
+    year: "2026",
+    rating: "8.1",
+    duration: "1 Season",
+    synopsis: "A century before Game of Thrones, two unlikely heroes wandered Westeros: a young, naive but courageous knight, Ser Duncan the Tall, and his diminutive squire, Egg. Set in an age when the Targaryen line still holds the Iron Throne.",
+    accent: "bg-orange-600",
+    },
+    {
+    id: 25,
+    title: "PRISON BREAK",
+    type: "series",
+    categories: ["series", "action", "crime", "thriller"],
+    director: "CREATED BY PAUL SCHEURING",
+    tagline: "BREAK OUT OR DIE TRYING",
+    videoUrl:
+        "https://www.youtube.com/embed/AL9zLct90X8?autoplay=1&mute=1&controls=0&playlist=AL9zLct90X8&loop=1",
+    trailerUrl: "https://www.youtube.com/watch?v=AL9zLct90X8",
+    poster:
+        "https://images.unsplash.com/photo-1543326727-cf6c39e8f84c?auto=format&fit=crop&w=800&q=80",
+    backdrop:
+        "https://images.unsplash.com/photo-1594909122845-11baa439b7bf?auto=format&fit=crop&w=1400&q=80",
+    image:
+        "https://www.tvguide.com/a/img/catalog/provider/2/2/2-c27f22de23783343d407be1d71a3b88d.jpg",
+    year: "2005 - 2017",
+    rating: "8.3",
+    duration: "5 Seasons",
+    synopsis: "An innocent man is sent to death row, and his only hope is his brother, who makes it his mission to deliberately get himself sent to the same prison in order to break them both out from the inside out.",
+    accent: "bg-slate-700",
+    },
+    {
+    id: 26,
+    title: "THE GOLDEN SPOON",
+    type: "series",
+    categories: ["series", "fantasy", "drama", "psychological"],
+    director: "DIRECTED BY SONG HYUN-WOOK",
+    tagline: "CHOOSE YOUR PARENTS, CHANGE YOUR LIFE",
+    videoUrl:
+        "https://www.youtube.com/embed/pbHrIKz-Njs?autoplay=1&mute=1&controls=0&playlist=pbHrIKz-Njs&loop=1",
+    trailerUrl: "https://www.youtube.com/watch?v=pbHrIKz-Njs",
+    poster:
+        "https://images.unsplash.com/photo-1589118949245-7d38baf380d6?auto=format&fit=crop&w=800&q=80",
+    backdrop:
+        "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1400&q=80",
+    image:
+        "https://images.justwatch.com/poster/300815243/s718/the-golden-spoon.jpg",
+    year: "2022",
+    rating: "7.7",
+    duration: "16 Episodes",
+    synopsis: "A student born into a poor family uses a magical golden spoon to swap fates with his wealthy best friend, but he soon discovers that a life of riches comes with a heavy price.",
+    accent: "bg-yellow-600",
+    },
 
 ];
 
