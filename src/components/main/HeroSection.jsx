@@ -22,31 +22,62 @@ const HeroSection = () => {
           transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
           className="absolute inset-0 w-full h-full"
         >
+          {/* Video Layer */}
           <div className="absolute inset-0 w-full h-full scale-125">
             <iframe
-              src={heroMovies[index].videoUrl}
+              src={movies[index].videoUrl}
               className="w-full h-full object-cover pointer-events-none"
               allow="autoplay; encrypted-media"
-              title={heroMovies[index].title}
+              title={movies[index].title}
             />
           </div>
 
+          {/* Cinematic Overlays */}
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-black/60" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-transparent to-transparent" />
 
+          {/* Content */}
           <div className="relative z-10 flex flex-col items-start justify-center h-full max-w-7xl mx-auto px-8 md:px-16">
-            <h1 className="text-7xl md:text-9xl font-black text-white italic mb-6">
-              {heroMovies[index].title}
-            </h1>
+            <motion.p 
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.3 }}
+              className="tracking-[0.4em] text-xs md:text-sm mb-4 text-gray-300 font-medium uppercase"
+            >
+              {movies[index].director}
+            </motion.p>
+            
+            <motion.h1 
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.4 }}
+              className="text-7xl md:text-9xl font-black tracking-tighter text-white italic leading-none mb-6"
+            >
+              {movies[index].title}
+            </motion.h1>
 
-            <div className="mt-10 flex gap-4">
-              <Link
-                to={`/movie/${heroMovies[index].id}`}
-                className="px-10 py-4 bg-white text-black font-bold font-Kantumruy"
-              >
+            <motion.p 
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.5 }}
+              className="tracking-[0.6em] text-sm md:text-lg text-white border-l-4 border-red-600 pl-4 uppercase"
+            >
+              {movies[index].tagline}
+            </motion.p>
+
+            <motion.div 
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.6 }}
+              className="mt-10 flex gap-4"
+            >
+              <button className="px-10 bg-white text-black font-bold text-[15px] hover:scale-105 transition-transform duration-200​​ font-Kantumruy​​ hover:cursor-pointer font-Kantumruy">
                 ទស្សនាឥឡូវនេះ
-              </Link>
-            </div>
+              </button>
+              <button className="px-10 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white font-bold text-sm hover:bg-white/20 transition-all">
+                + MY LIST
+              </button>
+            </motion.div>
           </div>
         </motion.div>
       </AnimatePresence>
