@@ -1,42 +1,44 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import MovieLayout from "./MovieLayout.jsx";
-import { allContent } from "../data/index.js";
+import movies from "../data/movies.js";
 
-export default function MoviePage({ movie: fallbackMovie }) {
-  const { id } = useParams();
-  const navigate = useNavigate();
+export default function MoviePage() {
+	const { id } = useParams();
+	const navigate = useNavigate();
 
-  const currentMovie = id
-    ? allContent.find((m) => m.id.toString() === id)
-    : fallbackMovie;
+	const getMovieById = (id) => {
+		if (!id) return null;
+		const found = movies.find((m) => String(m.id) === String(id));
+		if (!found) return null;
 
-  if (!currentMovie) return <h1>Movie not found</h1>;
+		// enrich with placeholder fields expected by MovieLayout
+		return {
+			...found,
+			cast: found.cast || [],
+			related: movies.filter((m) => m.id !== found.id),
+			backdrop: found.backdrop || found.videoUrl || "",
+			poster: found.poster || "",
+			synopsis: found.synopsis || "",
+			rating: found.rating || "-",
+			year: found.year || "",
+			duration: found.duration || "",
+		};
+	};
 
-  // State for the current trailer URL (movie or episode)
-  const [currentTrailer, setCurrentTrailer] = useState(
-    currentMovie.trailerUrl
-  );
+	const movie = getMovieById(id);
 
-  // Reset trailer when the movie changes
-  useEffect(() => {
-    setCurrentTrailer(currentMovie.trailerUrl);
-  }, [currentMovie]);
+	const handleSelectMovie = (m) => {
+		navigate(`/movie/${m.id}`);
+	};
 
-  const handleSelectMovie = (m) => {
-    navigate(`/movie/${m.id}`);
-  };
+	if (!movie) {
+		return (
+			<div className="min-h-screen flex items-center justify-center bg-black text-white">
+				<p>Movie not found.</p>
+			</div>
+		);
+	}
 
-  const handleEpisodeSelect = (episode) => {
-    setCurrentTrailer(episode.videoUrl); // update hero trailer
-  };
-
-  return (
-    <MovieLayout
-      movie={currentMovie}
-      onSelectMovie={handleSelectMovie}
-      currentTrailer={currentTrailer} // pass to HeroSection
-      onEpisodeSelect={handleEpisodeSelect} // pass to SeasonSection
-    />
-  );
+	return <MovieLayout movie={movie} onSelectMovie={handleSelectMovie} />;
 }
