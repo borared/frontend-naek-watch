@@ -303,23 +303,88 @@ const movies = [
     id: 2000,
     title: "STRANGER THINGS",
     type: "series",
-    categories: ["series", "sci-fi", "horror"],
+    categories: ["series", "horror", "mystery"],
     director: "CREATED BY THE DUFFER BROTHERS",
-    tagline: "ONE SUMMER CAN CHANGE EVERYTHING",
-    videoUrl:
-        "https://www.youtube.com/embed/b9EkMc79ZSU?autoplay=1&mute=1&controls=0&playlist=b9EkMc79ZSU&loop=1",
+    tagline: "FRIENDS DON'T LIE",
+    videoUrl: "https://www.youtube.com/embed/b9EkMc79ZSU?autoplay=1&mute=1&controls=0&playlist=b9EkMc79ZSU&loop=1",
     trailerUrl: "https://www.youtube.com/watch?v=b9EkMc79ZSU",
-    poster:
-        "https://images.unsplash.com/photo-1594909122845-11baa439b7bf?auto=format&fit=crop&w=800&q=80",
-    backdrop:
-        "https://images.unsplash.com/photo-1505635330303-31953c29b04f?auto=format&fit=crop&w=1400&q=80",
-    image:
-        "https://www.fangoria.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2025/07/Screenshot-2025-07-15-at-16.48.42.png.webp",
+    poster: "https://images.unsplash.com/photo-1594909122845-11baa439b7bf?auto=format&fit=crop&w=800&q=80",
+    backdrop: "https://images.unsplash.com/photo-1505635330303-31953c29b04f?auto=format&fit=crop&w=1400&q=80",
+    image: "https://www.fangoria.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2025/07/Screenshot-2025-07-15-at-16.48.42.png.webp",
     year: "2016 - 2025",
     rating: "8.7",
-    duration: "4 Seasons",
-    synopsis: "When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl.",
-    accent: "bg-red-900",
+    duration: "5 Seasons / 42 Episodes",
+    synopsis: "In a small town where everyone knows everyone, a peculiar incident sets off a chain of events that leads to the disappearance of a child, which begins to tear at the fabric of an otherwise peaceful community.",
+    accent: "bg-red-950",
+    seasons: [
+        {
+            season: 1,
+            episodes: [
+                { ep: 1, title: "Chapter One: The Vanishing of Will Byers" },
+                { ep: 2, title: "Chapter Two: The Weirdo on Maple Street" },
+                { ep: 3, title: "Chapter Three: Holly, Jolly" },
+                { ep: 4, title: "Chapter Four: The Body" },
+                { ep: 5, title: "Chapter Five: The Flea and the Acrobat" },
+                { ep: 6, title: "Chapter Six: The Monster" },
+                { ep: 7, title: "Chapter Seven: The Bathtub" },
+                { ep: 8, title: "Chapter Eight: The Upside Down" }
+            ]
+        },
+        {
+            season: 2,
+            episodes: [
+                { ep: 1, title: "Chapter One: MADMAX" },
+                { ep: 2, title: "Chapter Two: Trick or Treat, Freak" },
+                { ep: 3, title: "Chapter Three: The Pollywog" },
+                { ep: 4, title: "Chapter Four: Will the Wise" },
+                { ep: 5, title: "Chapter Five: Dig Dug" },
+                { ep: 6, title: "Chapter Six: The Spy" },
+                { ep: 7, title: "Chapter Seven: The Lost Sister" },
+                { ep: 8, title: "Chapter Eight: The Mind Flayer" },
+                { ep: 9, title: "Chapter Nine: The Gate" }
+            ]
+        },
+        {
+            season: 3,
+            episodes: [
+                { ep: 1, title: "Chapter One: Suzie, Do You Copy?" },
+                { ep: 2, title: "Chapter Two: The Mall Rats" },
+                { ep: 3, title: "Chapter Three: The Case of the Missing Lifeguard" },
+                { ep: 4, title: "Chapter Four: The Sauna Test" },
+                { ep: 5, title: "Chapter Five: The Flayed" },
+                { ep: 6, title: "Chapter Six: E Pluribus Unum" },
+                { ep: 7, title: "Chapter Seven: The Bite" },
+                { ep: 8, title: "Chapter Eight: The Battle of Starcourt" }
+            ]
+        },
+        {
+            season: 4,
+            episodes: [
+                { ep: 1, title: "Chapter One: The Hellfire Club" },
+                { ep: 2, title: "Chapter Two: Vecna's Curse" },
+                { ep: 3, title: "Chapter Three: The Monster and the Superhero" },
+                { ep: 4, title: "Chapter Four: Dear Billy" },
+                { ep: 5, title: "Chapter Five: The Nina Project" },
+                { ep: 6, title: "Chapter Six: The Dive" },
+                { ep: 7, title: "Chapter Seven: The Massacre at Hawkins Lab" },
+                { ep: 8, title: "Chapter Eight: Papa" },
+                { ep: 9, title: "Chapter Nine: The Piggyback" }
+            ]
+        },
+        {
+            season: 5,
+            episodes: [
+                { ep: 1, title: "Chapter One: The Crawl" },
+                { ep: 2, title: "Chapter Two: The Vanishing of Holly Wheeler" },
+                { ep: 3, title: "Chapter Three: The Turnbow Trap" },
+                { ep: 4, title: "Chapter Four: Sorcerer" },
+                { ep: 5, title: "Chapter Five: Shock Jock" },
+                { ep: 6, title: "Chapter Six: Escape from Camazotz" },
+                { ep: 7, title: "Chapter Seven: The Bridge" },
+                { ep: 8, title: "Chapter Eight: The Rightside Up" }
+            ]
+        }
+    ]
     },
 
 	{
