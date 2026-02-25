@@ -38,7 +38,7 @@ export default function SeasonSection({ movie, onEpisodeSelect }) {
 					<div
 						key={ep.id}
 						onClick={() => onEpisodeSelect(ep)}
-						className="group flex flex-col md:flex-row gap-6 bg-zinc-900/60 backdrop-blur-xl p-5 rounded-2xl shadow-xl border border-white/5 hover:border-white/20 transition-all duration-300 cursor-pointer hover:scale-[1.02]"
+						className="group flex flex-col md:flex-row gap-6 bg-zinc-900/60 backdrop-blur-xl p-5 rounded-2xl shadow-xl border border-white/5 hover:border-white/20 transition-all duration-300 cursor-pointer"
 					>
 						{/* Thumbnail */}
 						<div className="relative w-full md:w-72 h-44 flex-shrink-0 rounded-xl overflow-hidden">
