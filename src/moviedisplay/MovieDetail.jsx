@@ -6,15 +6,15 @@ import movies from "../data/movies.js";
 export default function MovieDetail() {
 	const { id } = useParams();
 	const navigate = useNavigate();
+	const [currentTrailer, setCurrentTrailer] = useState(null);
 
-	const getMovieById = (id) => {
-		if (!id) return null;
-		const found = movies.find((m) => String(m.id) === String(id));
+	const normalizeMovie = (found) => {
 		if (!found) return null;
 
-		// enrich with placeholder fields expected by MovieLayout
-		return {
+		// Normalize type to lowercase
+		const normalizedMovie = {
 			...found,
+			type: found.type?.toLowerCase() || "movie",
 			cast: found.cast || [],
 			related: movies.filter((m) => m.id !== found.id),
 			backdrop: found.backdrop || found.videoUrl || "",
@@ -23,13 +23,51 @@ export default function MovieDetail() {
 			rating: found.rating || "-",
 			year: found.year || "",
 			duration: found.duration || "",
+			videoUrl: found.videoUrl || "",
 		};
+
+		// Transform seasons data if it exists (normalize different season formats)
+		if (found.seasons && Array.isArray(found.seasons)) {
+			normalizedMovie.seasons = found.seasons.map((season) => {
+				const seasonNumber = season.seasonNumber || season.season;
+				return {
+					seasonNumber,
+					episodes: (season.episodes || []).map((ep, index) => ({
+						id: ep.id || `s${seasonNumber}e${ep.ep || index + 1}`,
+						title: ep.title || `Episode ${ep.ep || index + 1}`,
+						duration: ep.duration || "45m",
+						videoUrl: ep.videoUrl || found.videoUrl || "",
+						thumbnail: ep.thumbnail || found.poster || "",
+					})),
+				};
+			});
+		}
+
+		return normalizedMovie;
+	};
+
+	const getMovieById = (id) => {
+		if (!id) return null;
+		const found = movies.find((m) => String(m.id) === String(id));
+		return normalizeMovie(found);
 	};
 
 	const movie = getMovieById(id);
 
+	// Set initial trailer
+	useEffect(() => {
+		if (movie) {
+			setCurrentTrailer(movie.videoUrl || movie.trailerUrl);
+		}
+	}, [movie]);
+
 	const handleSelectMovie = (m) => {
 		navigate(`/movie/${m.id}`);
+	};
+
+	const handleEpisodeSelect = (episode) => {
+		// Update the trailer to the episode's video URL
+		setCurrentTrailer(episode.videoUrl);
 	};
 
 	if (!movie) {
@@ -40,5 +78,12 @@ export default function MovieDetail() {
 		);
 	}
 
-	return <MovieLayout movie={movie} onSelectMovie={handleSelectMovie} />;
+	return (
+		<MovieLayout
+			movie={movie}
+			onSelectMovie={handleSelectMovie}
+			currentTrailer={currentTrailer}
+			onEpisodeSelect={handleEpisodeSelect}
+		/>
+	);
 }
