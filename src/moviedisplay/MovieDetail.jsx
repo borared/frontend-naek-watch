@@ -37,7 +37,7 @@ export default function MovieDetail() {
 						title: ep.title || `Episode ${ep.ep || index + 1}`,
 						duration: ep.duration || "45m",
 						videoUrl: ep.videoUrl || found.videoUrl || "",
-						thumbnail: ep.thumbnail || found.poster || "",
+						image: ep.image,
 					})),
 				};
 			});
