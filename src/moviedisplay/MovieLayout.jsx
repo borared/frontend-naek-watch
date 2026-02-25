@@ -1,56 +1,95 @@
-import React from "react";
-import HeroSection from "./HeroSection.jsx";
-import MovieInfo from "./MovieInfo.jsx";
-import CastList from "./CastList.jsx";
-import RelatedMovies from "./RelatedMovies.jsx";
-import SeasonSection from "./SeasonSection.jsx";
+import React, { useState } from "react";
 
-export default function MovieLayout({
-  movie,
-  onSelectMovie,
-  currentTrailer,
-  onEpisodeSelect,
-}) {
+export default function SeasonSection({ movie, onEpisodeSelect }) {
+  const [selectedSeason, setSelectedSeason] = useState(
+    movie.seasons?.[0]?.seasonNumber || 1
+  );
+
+  const selectedSeasonData = movie.seasons?.find(
+    (s) => s.seasonNumber === selectedSeason
+  );
+
   return (
-    <div className="min-h-screen bg-black text-white">
-      {/* Hero section uses the dynamic trailer */}
-      <HeroSection
-        movie={movie}
-        trailerUrl={currentTrailer}
-        onPlay={() => console.log("Play full movie:", movie.title)}
-      />
+    <div>
 
-      <section className="px-6 py-6 md:px-12 md:py-10">
-        <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="md:col-span-2">
-            <MovieInfo movie={movie} />
-            <CastList cast={movie.cast} />
+      
+      {/* Title */}
+      <h2 className="text-3xl font-bold mb-8 tracking-wide">
+        Episodes
+      </h2>
 
-            {movie.type === "series" && (
-              <SeasonSection
-                movie={movie}
-                onEpisodeSelect={onEpisodeSelect}
+      {/* Season Selector */}
+      <div className="flex gap-4 mb-10 flex-wrap px-6">
+        {movie.seasons.map((season) => (
+          <button
+            key={season.seasonNumber}
+            onClick={() => setSelectedSeason(season.seasonNumber)}
+            className={`px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300 hover:cursor-pointer
+              ${
+                selectedSeason === season.seasonNumber
+                  ? "bg-red-600 text-white shadow-lg scale-105"
+                  : "bg-zinc-800 text-zinc-400 hover:bg-zinc-700 hover:text-white"
+              }`}
+          >
+            Season {season.seasonNumber}
+          </button>
+        ))}
+      </div>
+
+      {/* Episodes List */}
+      <div className="space-y-6 p-6">
+        {selectedSeasonData?.episodes.map((episode, index) => (
+          <div
+            key={episode.id}
+            onClick={() => onEpisodeSelect(episode)}
+            className="group flex flex-col md:flex-row gap-6 bg-zinc-900/60 backdrop-blur-xl p-5 rounded-2xl shadow-xl border border-white/5 hover:border-white/20 transition-all duration-300 cursor-pointer hover:scale-[1.02]"
+          >
+            {/* Thumbnail */}
+            <div className="relative w-full md:w-72 h-44 flex-shrink-0 rounded-xl overflow-hidden">
+              <img
+                src={episode.thumbnail}
+                alt={episode.title}
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
-            )}
-          </div>
 
-          <aside className="bg-black/60 p-4 rounded-lg h-full">
-            <div className="text-sm text-gray-300">Subtitles</div>
-            <div className="mt-3 space-y-3">
-              <div className="flex items-center gap-2">
-                <span className="w-3 h-3 bg-green-500 rounded-full" />
-                <span>Khmer</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="w-3 h-3 bg-yellow-500 rounded-full" />
-                <span>English</span>
+              {/* Dark gradient */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+
+              {/* Play button */}
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                <div className="bg-white/20 backdrop-blur-md p-4 rounded-full border border-white/30">
+                  <svg
+                    className="w-6 h-6 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
               </div>
             </div>
-          </aside>
-        </div>
 
-        <RelatedMovies movies={movie.related} onSelectMovie={onSelectMovie} />
-      </section>
+            {/* Episode Info */}
+            <div className="flex-1 flex flex-col justify-between">
+              <div>
+                <h3 className="text-lg font-semibold text-white">
+                  {index + 1}. {episode.title}
+                </h3>
+
+                {/* Optional description placeholder */}
+                <p className="text-sm text-zinc-400 mt-2 line-clamp-3">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  A mysterious event begins to unfold in this episode.
+                </p>
+              </div>
+
+              <div className="mt-4 text-sm text-zinc-500">
+                {episode.duration}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
