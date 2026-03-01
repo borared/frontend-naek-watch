@@ -92,7 +92,7 @@ export default function Navbar() {
                     {/* RESULTS DROPDOWN */}
                     {isSearchOpen && searchQuery && (
                         <div className="absolute top-[60px] right-0 w-72 md:w-96 bg-zinc-950 border border-white/10 rounded-xl shadow-2xl overflow-hidden z-50 animate-in fade-in slide-in-from-top-4 duration-300">
-                            <div className="p-2 border-b border-white/5 text-[11px] text-gray-500 uppercase font-bold tracking-widest px-4">លទ្ធផលស្វែងរក</div>
+                            <div className="p-2 border-b border-white/5 text-white uppercase font-bold px-4 font-Kantumruy text-[15px]">លទ្ធផលស្វែងរក</div>
                             
                             {filteredMovies.length > 0 ? (
                                 filteredMovies.map(movie => (
@@ -103,7 +103,7 @@ export default function Navbar() {
                                         className="flex items-center gap-3 p-3 hover:bg-white/5 transition-colors border-b border-white/5 last:border-none group"
                                     >
                                         {/* Movie Poster Image */}
-                                        <div className="w-12 h-16 flex-shrink-0 overflow-hidden rounded-md bg-zinc-800">
+                                        <div className="w-20 h-28 flex-shrink-0 overflow-hidden rounded-md bg-zinc-800">
                                             <img 
                                                 src={movie.image} 
                                                 alt={movie.title} 
@@ -113,22 +113,24 @@ export default function Navbar() {
                                         
                                         {/* Movie Details */}
                                         <div className="flex-1 overflow-hidden">
-                                            <h4 className="text-[14px] font-bold truncate group-hover:text-red-500 transition-colors uppercase tracking-tight">
+                                            <h4 className="text-[16px] font-bold truncate group-hover:text-red-500 transition-colors uppercase tracking-tight">
                                                 {movie.title}
                                             </h4>
                                             <div className="flex items-center gap-2 mt-1">
-                                                <span className="text-[11px] bg-zinc-800 px-1.5 py-0.5 rounded text-gray-300 uppercase">{movie.type}</span>
-                                                <span className="text-[11px] text-gray-500">{movie.year}</span>
+                                                <span className="text-[15px] bg-zinc-800 px-1.5 py-0.5 rounded text-gray-300 uppercase">{movie.type}</span>
+                                                <span className="text-[15px] text-gray-500">{movie.year}</span>
                                                 <div className="flex items-center gap-1 text-yellow-500">
-                                                    <svg className="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                                    <span className="text-[11px] font-bold">{movie.rating}</span>
+                                                    <svg className="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588
+                                                     1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1
+                                                      1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                                    <span className="text-[15px] font-bold">{movie.rating}</span>
                                                 </div>
                                             </div>
                                         </div>
                                     </Link>
                                 ))
                             ) : (
-                                <div className="px-4 py-8 text-center text-sm text-gray-500 font-Kantumruy">រកមិនឃើញរឿងដែលអ្នកចង់ស្វែងរកឡើយ</div>
+                                <div className="px-4 py-8 text-center text-sm text-gray-500 font-Kantumruy text-[18px]">រកមិនឃើញរឿងដែលអ្នកចង់ស្វែងរកឡើយ</div>
                             )}
                         </div>
                     )}
