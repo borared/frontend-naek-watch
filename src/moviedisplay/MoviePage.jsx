@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import MovieLayout from "./MovieLayout.jsx";
-import movies from "../data/movies.js";
+import media from "../data/media";
 
 export default function MovieDetail() {
 	const { id } = useParams();
@@ -9,14 +9,14 @@ export default function MovieDetail() {
 
 	const getMovieById = (id) => {
 		if (!id) return null;
-		const found = movies.find((m) => String(m.id) === String(id));
+		const found = media.find((m) => String(m.id) === String(id));
 		if (!found) return null;
 
 		// enrich with placeholder fields expected by MovieLayout
 		return {
 			...found,
 			cast: found.cast || [],
-			related: movies.filter((m) => m.id !== found.id),
+		related: media.filter((m) => m.id !== found.id),
 			backdrop: found.backdrop || found.videoUrl || "",
 			poster: found.poster || "",
 			synopsis: found.synopsis || "",
