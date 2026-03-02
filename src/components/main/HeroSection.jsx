@@ -1,21 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import movies from "../../data/movies";
-
+import useSlider from "../../hook/useSlider";
 
 const heroMovies = movies.filter((movie) => movie.id >= 1 && movie.id <= 5);
 
 const HeroSection = () => {
-	const [index, setIndex] = useState(0);
-
-	useEffect(() => {
-		const timer = setInterval(() => {
-			setIndex((prev) => (prev + 1) % heroMovies.length);
-		}, 30000);
-
-		return () => clearInterval(timer);
-	}, []);
+	const { index, nextSlide, prevSlide } = useSlider(heroMovies.length, 30000);
 
 	return (
 		<div className="relative h-[90vh] w-full overflow-hidden bg-black font-sans">
@@ -31,10 +23,10 @@ const HeroSection = () => {
 					{/* Video Layer */}
 					<div className="absolute inset-0 w-full h-full scale-125">
 						<iframe
-							src={heroMovies[index].videoUrl}
+							src={movies[index].videoUrl}
 							className="w-full h-full object-cover pointer-events-none"
 							allow="autoplay; encrypted-media"
-							title={heroMovies[index].title}
+							title={movies[index].title}
 						/>
 					</div>
 
@@ -50,7 +42,7 @@ const HeroSection = () => {
 							transition={{ delay: 0.3 }}
 							className="tracking-[0.4em] text-xs md:text-sm mb-4 text-gray-300 font-medium uppercase"
 						>
-							{heroMovies[index].director}
+							{movies[index].director}
 						</motion.p>
 
 						<motion.h1
@@ -59,7 +51,7 @@ const HeroSection = () => {
 							transition={{ delay: 0.4 }}
 							className="text-7xl md:text-9xl font-black tracking-tighter text-white italic leading-none mb-6"
 						>
-							{heroMovies[index].title}
+							{movies[index].title}
 						</motion.h1>
 
 						<motion.p
@@ -68,7 +60,7 @@ const HeroSection = () => {
 							transition={{ delay: 0.5 }}
 							className="tracking-[0.6em] text-sm md:text-lg text-white border-l-4 border-red-600 pl-4 uppercase"
 						>
-							{heroMovies[index].tagline}
+							{movies[index].tagline}
 						</motion.p>
 
 						<motion.div
@@ -77,12 +69,12 @@ const HeroSection = () => {
 							transition={{ delay: 0.6 }}
 							className="mt-10 flex gap-4"
 						>
-							<button className="px-10 bg-white text-black font-bold text-[15px] hover:scale-105 transition-transform duration-200 font-Kantumruy hover:cursor-pointer">
-								<Link to={`/movie/${heroMovies[index].id}`}>
-									ទស្សនាឥឡូវនេះ
-								</Link>
-							</button>
-
+							<Link
+								to={`/movie/${heroMovies[index].id}`}
+								className="flex items-center justify-center px-10 h-13 bg-white text-black font-bold text-[15px] hover:scale-105 transition-transform duration-200 font-Kantumruy cursor-pointer"
+							>
+								ទស្សនាឥឡូវនេះ
+							</Link>
 							<button className="px-10 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white font-bold text-sm hover:bg-white/20 transition-all">
 								+ MY LIST
 							</button>
@@ -91,21 +83,72 @@ const HeroSection = () => {
 				</motion.div>
 			</AnimatePresence>
 
-			{/* Slide Indicators */}
-			<div className="absolute bottom-10 right-10 z-30 flex items-center gap-4">
+			{/* Indicators + Arrows */}
+			<div className="absolute bottom-10 right-10 z-30 flex flex-col items-end gap-4">
 				<div className="flex gap-2">
 					{heroMovies.map((_, i) => (
 						<div
 							key={i}
-							className={`h-1 w-8 transition-all duration-500 ${
-								i === index ? "bg-white w-12" : "bg-white/30"
+							className={`h-1 transition-all duration-500 ${
+								i === index ? "bg-white w-12" : "bg-white/30 w-8"
 							}`}
 						/>
 					))}
 				</div>
+
+				<div className="flex gap-4">
+					<button
+						onClick={prevSlide}
+						className="w-10 h-10 flex items-center justify-center 
+            bg-white/10 hover:bg-white/20 
+            border border-white/20 
+            backdrop-blur-md 
+            text-white rounded-full 
+            transition-all duration-200 hover:cursor-pointer"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							className="h-4 w-4"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+						>
+							<path
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								strokeWidth="2"
+								d="M15 19l-7-7 7-7"
+							/>
+						</svg>
+					</button>
+
+					<button
+						onClick={nextSlide}
+						className="w-10 h-10 flex items-center justify-center 
+            bg-white/10 hover:bg-white/20 
+            border border-white/20 
+            backdrop-blur-md 
+            text-white rounded-full 
+            transition-all duration-200 hover:cursor-pointer"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							className="h-4 w-4"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+						>
+							<path
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								strokeWidth="2"
+								d="M9 5l7 7-7 7"
+							/>
+						</svg>
+					</button>
+				</div>
 			</div>
 
-			{/* Auto-play Progress Timer */}
 			<motion.div
 				key={`bar-${index}`}
 				initial={{ scaleX: 0 }}

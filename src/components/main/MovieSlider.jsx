@@ -3,10 +3,13 @@ import { ChevronRight } from "lucide-react";
 import MovieCard from "../MovieCard";
 import movies from "../../data/movies";
 import { chunkArray } from "../../utils/pagination";
+import { useNavigate } from "react-router-dom";
+
 
 
 const MovieSlider = ({ category, title }) => {
     const [currentPage, setCurrentPage] = useState(0);
+    const navigate = useNavigate();
 
     // 1. Filter the movies first
     const filteredMovies = movies.filter((movie) =>
@@ -28,6 +31,11 @@ const MovieSlider = ({ category, title }) => {
         setCurrentPage((prev) => (prev + 1) % moviePages.length);
     };
 
+    //go to MoviePage when click on movie card
+    const handleSelectMovie = (movie) => {
+        navigate(`/movie/${movie.id}`);   
+    };
+
     if (filteredMovies.length === 0) return null;
 
     return (
@@ -45,7 +53,13 @@ const MovieSlider = ({ category, title }) => {
                 {/* FIXED: Use backticks for template literals */}
                 <div className={`grid ${columnsClass} gap-4`}>
                     {moviePages[currentPage]?.map((movie) => (
+                        <div
+                            key={movie.id}
+                            onClick={() => handleSelectMovie(movie)}
+                            className="cursor-pointer"
+                        >
                         <MovieCard key={movie.id} movie={movie} />
+                    </div>
                     ))}
                 </div>
 
