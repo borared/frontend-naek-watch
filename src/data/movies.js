@@ -303,23 +303,88 @@ const movies = [
     id: 2000,
     title: "STRANGER THINGS",
     type: "series",
-    categories: ["series", "sci-fi", "horror"],
+    categories: ["series", "horror", "mystery"],
     director: "CREATED BY THE DUFFER BROTHERS",
-    tagline: "ONE SUMMER CAN CHANGE EVERYTHING",
-    videoUrl:
-        "https://www.youtube.com/embed/b9EkMc79ZSU?autoplay=1&mute=1&controls=0&playlist=b9EkMc79ZSU&loop=1",
+    tagline: "FRIENDS DON'T LIE",
+    videoUrl: "https://www.youtube.com/embed/b9EkMc79ZSU?autoplay=1&mute=1&controls=0&playlist=b9EkMc79ZSU&loop=1",
     trailerUrl: "https://www.youtube.com/watch?v=b9EkMc79ZSU",
-    poster:
-        "https://images.unsplash.com/photo-1594909122845-11baa439b7bf?auto=format&fit=crop&w=800&q=80",
-    backdrop:
-        "https://images.unsplash.com/photo-1505635330303-31953c29b04f?auto=format&fit=crop&w=1400&q=80",
-    image:
-        "https://www.fangoria.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2025/07/Screenshot-2025-07-15-at-16.48.42.png.webp",
+    poster: "https://images.unsplash.com/photo-1594909122845-11baa439b7bf?auto=format&fit=crop&w=800&q=80",
+    backdrop: "https://images.unsplash.com/photo-1505635330303-31953c29b04f?auto=format&fit=crop&w=1400&q=80",
+    image: "https://www.fangoria.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2025/07/Screenshot-2025-07-15-at-16.48.42.png.webp",
     year: "2016 - 2025",
     rating: "8.7",
-    duration: "4 Seasons",
-    synopsis: "When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl.",
-    accent: "bg-red-900",
+    duration: "5 Seasons / 42 Episodes",
+    synopsis: "In a small town where everyone knows everyone, a peculiar incident sets off a chain of events that leads to the disappearance of a child, which begins to tear at the fabric of an otherwise peaceful community.",
+    accent: "bg-red-950",
+    seasons: [
+        {
+            season: 1,
+            episodes: [
+                { ep: 1, title: "Chapter One: The Vanishing of Will Byers", image: "https://assets3.thrillist.com/v1/image/2712204/792x529/scale;webp=auto;jpeg_quality=60;progressive.jpg"},
+                { ep: 2, title: "Chapter Two: The Weirdo on Maple Street", image: "https://static01.nyt.com/images/2017/10/26/arts/27stranger1/27stranger1-articleLarge.jpg?quality=75&auto=webp&disable=upscale" },
+                { ep: 3, title: "Chapter Three: Holly, Jolly", image: "https://www.popmatters.com/wp-content/uploads/2021/01/img-27707.jpg" },
+                { ep: 4, title: "Chapter Four: The Body", image: "https://m.media-amazon.com/images/M/MV5BMTkwMjU2MjgzOV5BMl5BanBnXkFtZTgwMzAzOTQ5ODE@._V1_.jpg" },
+                { ep: 5, title: "Chapter Five: The Flea and the Acrobat", image: "https://m.media-amazon.com/images/M/MV5BYTU2YTIxZDUtN2ExOS00ZDg4LThiNjEtNTlkNzJkZmJkM2YzXkEyXkFqcGc@._V1_.jpg" },
+                { ep: 6, title: "Chapter Six: The Monster", image: "https://metawitches.com/wp-content/uploads/2017/07/st106jonnancybeartrap.jpg"},
+                { ep: 7, title: "Chapter Seven: The Bathtub", image: "https://metawitches.com/wp-content/uploads/2017/07/st107el.jpg"},
+                { ep: 8, title: "Chapter Eight: The Upside Down", image: "https://wevegotbackissues.com/wp-content/uploads/2025/06/1000033110.jpg?w=1024"}
+            ]
+        },
+        {
+            season: 2,
+            episodes: [
+                { ep: 1, title: "Chapter One: MADMAX", image: "https://wevegotbackissues.com/wp-content/uploads/2025/06/1000033110.jpg?w=1024"  },
+                { ep: 2, title: "Chapter Two: Trick or Treat, Freak", image: "https://wevegotbackissues.com/wp-content/uploads/2025/06/1000033110.jpg?w=1024"  },
+                { ep: 3, title: "Chapter Three: The Pollywog", image: "https://wevegotbackissues.com/wp-content/uploads/2025/06/1000033110.jpg?w=1024"  },
+                { ep: 4, title: "Chapter Four: Will the Wise", image: "https://wevegotbackissues.com/wp-content/uploads/2025/06/1000033110.jpg?w=1024"  },
+                { ep: 5, title: "Chapter Five: Dig Dug", image: "https://wevegotbackissues.com/wp-content/uploads/2025/06/1000033110.jpg?w=1024"  },
+                { ep: 6, title: "Chapter Six: The Spy", image: "https://wevegotbackissues.com/wp-content/uploads/2025/06/1000033110.jpg?w=1024"  },
+                { ep: 7, title: "Chapter Seven: The Lost Sister", image: "https://wevegotbackissues.com/wp-content/uploads/2025/06/1000033110.jpg?w=1024"  },
+                { ep: 8, title: "Chapter Eight: The Mind Flayer", image: "https://wevegotbackissues.com/wp-content/uploads/2025/06/1000033110.jpg?w=1024"  },
+                { ep: 9, title: "Chapter Nine: The Gate", image: "https://wevegotbackissues.com/wp-content/uploads/2025/06/1000033110.jpg?w=1024"  }
+            ]
+        },
+        {
+            season: 3,
+            episodes: [
+                { ep: 1, title: "Chapter One: Suzie, Do You Copy?", image: "https://wevegotbackissues.com/wp-content/uploads/2025/06/1000033110.jpg?w=1024"  },
+                { ep: 2, title: "Chapter Two: The Mall Rats", image: "https://wevegotbackissues.com/wp-content/uploads/2025/06/1000033110.jpg?w=1024"  },
+                { ep: 3, title: "Chapter Three: The Case of the Missing Lifeguard", image: "https://wevegotbackissues.com/wp-content/uploads/2025/06/1000033110.jpg?w=1024"  },
+                { ep: 4, title: "Chapter Four: The Sauna Test", image: "https://wevegotbackissues.com/wp-content/uploads/2025/06/1000033110.jpg?w=1024"  },
+                { ep: 5, title: "Chapter Five: The Flayed", image: "https://wevegotbackissues.com/wp-content/uploads/2025/06/1000033110.jpg?w=1024"  },
+                { ep: 6, title: "Chapter Six: E Pluribus Unum", image: "https://wevegotbackissues.com/wp-content/uploads/2025/06/1000033110.jpg?w=1024"  },
+                { ep: 7, title: "Chapter Seven: The Bite", image: "https://wevegotbackissues.com/wp-content/uploads/2025/06/1000033110.jpg?w=1024"  },
+                { ep: 8, title: "Chapter Eight: The Battle of Starcourt", image: "https://wevegotbackissues.com/wp-content/uploads/2025/06/1000033110.jpg?w=1024"  }
+            ]
+        },
+        {
+            season: 4,
+            episodes: [
+                { ep: 1, title: "Chapter One: The Hellfire Club", image: "https://wevegotbackissues.com/wp-content/uploads/2025/06/1000033110.jpg?w=1024"  },
+                { ep: 2, title: "Chapter Two: Vecna's Curse", image: "https://wevegotbackissues.com/wp-content/uploads/2025/06/1000033110.jpg?w=1024"  },
+                { ep: 3, title: "Chapter Three: The Monster and the Superhero", image: "https://wevegotbackissues.com/wp-content/uploads/2025/06/1000033110.jpg?w=1024"  },
+                { ep: 4, title: "Chapter Four: Dear Billy", image: "https://wevegotbackissues.com/wp-content/uploads/2025/06/1000033110.jpg?w=1024"  },
+                { ep: 5, title: "Chapter Five: The Nina Project", image: "https://wevegotbackissues.com/wp-content/uploads/2025/06/1000033110.jpg?w=1024"  },
+                { ep: 6, title: "Chapter Six: The Dive", image: "https://wevegotbackissues.com/wp-content/uploads/2025/06/1000033110.jpg?w=1024"  },
+                { ep: 7, title: "Chapter Seven: The Massacre at Hawkins Lab", image: "https://wevegotbackissues.com/wp-content/uploads/2025/06/1000033110.jpg?w=1024"  },
+                { ep: 8, title: "Chapter Eight: Papa", image: "https://wevegotbackissues.com/wp-content/uploads/2025/06/1000033110.jpg?w=1024"  },
+                { ep: 9, title: "Chapter Nine: The Piggyback", image: "https://wevegotbackissues.com/wp-content/uploads/2025/06/1000033110.jpg?w=1024"  }
+            ]
+        },
+        {
+            season: 5,
+            episodes: [
+                { ep: 1, title: "Chapter One: The Crawl", image: "https://wevegotbackissues.com/wp-content/uploads/2025/06/1000033110.jpg?w=1024"  },
+                { ep: 2, title: "Chapter Two: The Vanishing of Holly Wheeler", image: "https://wevegotbackissues.com/wp-content/uploads/2025/06/1000033110.jpg?w=1024"  },
+                { ep: 3, title: "Chapter Three: The Turnbow Trap", image: "https://wevegotbackissues.com/wp-content/uploads/2025/06/1000033110.jpg?w=1024"  },
+                { ep: 4, title: "Chapter Four: Sorcerer", image: "https://wevegotbackissues.com/wp-content/uploads/2025/06/1000033110.jpg?w=1024"  },
+                { ep: 5, title: "Chapter Five: Shock Jock", image: "https://wevegotbackissues.com/wp-content/uploads/2025/06/1000033110.jpg?w=1024"  },
+                { ep: 6, title: "Chapter Six: Escape from Camazotz", image: "https://wevegotbackissues.com/wp-content/uploads/2025/06/1000033110.jpg?w=1024"  },
+                { ep: 7, title: "Chapter Seven: The Bridge", image: "https://wevegotbackissues.com/wp-content/uploads/2025/06/1000033110.jpg?w=1024"  },
+                { ep: 8, title: "Chapter Eight: The Rightside Up", image: "https://wevegotbackissues.com/wp-content/uploads/2025/06/1000033110.jpg?w=1024"  }
+            ]
+        }
+    ]
     },
 
 	{
@@ -352,64 +417,40 @@ const movies = [
     categories: ["series", "sci-fi", "adventure"],
     director: "CREATED BY MICHAEL WALDRON",
     tagline: "HIS TIME HAS COME",
-    videoUrl:
-        "https://www.youtube.com/embed/dug56u8NN7g?autoplay=1&mute=1&controls=0&playlist=dug56u8NN7g&loop=1",
+    videoUrl: "https://www.youtube.com/embed/dug56u8NN7g?autoplay=1&mute=1&controls=0&playlist=dug56u8NN7g&loop=1",
     trailerUrl: "https://www.youtube.com/watch?v=dug56u8NN7g",
-    poster:
-        "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?auto=format&fit=crop&w=800&q=80",
-    backdrop:
-        "https://images.unsplash.com/photo-1635863138275-d9b33299680b?auto=format&fit=crop&w=1400&q=80",
-    image:
-        "https://thecosmiccircus.com/wp-content/uploads/2023/05/Untitled_design_4.jpg",
+    poster: "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?auto=format&fit=crop&w=800&q=80",
+    backdrop: "https://images.unsplash.com/photo-1635863138275-d9b33299680b?auto=format&fit=crop&w=1400&q=80",
+    image: "https://www.cancelledscifi.com/wp-content/uploads/2021/05/loki-disney-plus-banner.jpg",
     year: "2021 - 2023",
     rating: "8.2",
-    duration: "2 Seasons",
-    synopsis: "The mercurial villain Loki resumes his role as the God of Mischief in a new series that takes place after the events of 'Avengers: Endgame.'",
+    duration: "2 Seasons / 12 Episodes",
+    synopsis: "After stealing the Tesseract during the events of 'Avengers: Endgame,' an alternate version of Loki is brought to the mysterious Time Variance Authority (TVA), a bureaucratic organization that exists outside of time and space.",
     accent: "bg-emerald-600",
-    },
-	{
-    id: 2003,
-    title: "THE BOYS",
-    type: "series",
-    categories: ["series", "action", "satire"],
-    director: "CREATED BY ERIC KRIPKE",
-    tagline: "NEVER MEET YOUR HEROES",
-    videoUrl:
-        "https://www.youtube.com/embed/M1bhOaLv4FU?autoplay=1&mute=1&controls=0&playlist=M1bhOaLv4FU&loop=1",
-    trailerUrl: "https://www.youtube.com/watch?v=M1bhOaLv4FU",
-    poster:
-        "https://images.unsplash.com/photo-1594909122845-11baa439b7bf?auto=format&fit=crop&w=800&q=80",
-    backdrop:
-        "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?auto=format&fit=crop&w=1400&q=80",
-    image:
-        "https://assets.aboutamazon.com/68/98/94061820499588f9972df61a059b/rh-full-width-inline-2550x1434.jpg",
-    year: "2019 - 2026",
-    rating: "8.7",
-    duration: "4 Seasons",
-    synopsis: "A group of vigilantes set out to take down corrupt superheroes who abuse their superpowers. It's the powerless against the super-powerful as 'The Boys' embark on a quest to expose the truth about The Seven.",
-    accent: "bg-blue-900",
-    },
-	{
-    id: 2004,
-    title: "JUJUTSU KAISEN",
-    type: "series",
-    categories: ["series", "anime", "action", "dark fantasy"],
-    director: "DIRECTED BY SUNGOO PARK / SHOTA GOSHOZONO",
-    tagline: "CURSE THE FATE THAT BINDS YOU",
-    videoUrl:
-        "https://www.youtube.com/embed/ruX3rIj3--w?autoplay=1&mute=1&controls=0&playlist=ruX3rIj3--w&loop=1",
-    trailerUrl: "https://www.youtube.com/watch?v=ruX3rIj3--w",
-    poster:
-        "https://images.unsplash.com/photo-1618336753974-aae8e04506aa?auto=format&fit=crop&w=800&q=80",
-    backdrop:
-        "https://images.unsplash.com/photo-1578632292335-df3abbb0d586?auto=format&fit=crop&w=1400&q=80",
-    image:
-        "https://5.imimg.com/data5/ANDROID/Default/2023/4/298334358/UV/IR/QX/15232517/product-jpeg-500x500.jpg",
-    year: "2020 - 2026",
-    rating: "8.6",
-    duration: "3 Seasons",
-    synopsis: "A boy swallows a cursed talisman - the finger of a demon - and becomes cursed himself. He enters a shaman's school to be able to locate the demon's other body parts and thus exorcise himself.",
-    accent: "bg-indigo-900",
+    seasons: [
+        {
+            season: 1,
+            episodes: [
+                { ep: 1, title: "Glorious Purpose", image: "https://static.independent.co.uk/2021/06/11/19/newFile-11.jpg" },
+                { ep: 2, title: "The Variant", image: "https://pyxis.nymag.com/v1/imgs/564/b0d/64dddfffb82f52a7f3557eaa714a5786b5-loki-episode-2.jpg" },
+                { ep: 3, title: "Lamentis", image: "https://sm.ign.com/ign_ap/gallery/m/marvels-lo/marvels-loki-images-and-poster_nefg.jpg" },
+                { ep: 4, title: "The Nexus Event", image: "https://www.pajiba.com/assets_c/2021/06/Loki%20Ep%204%20Recap%20%281%29-thumb-700xauto-236290.png" },
+                { ep: 5, title: "Journey into Mystery", image: "https://ew.com/thmb/h-zrYnpLdCmMtFKZHUpv4afQgwY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Loki_3-c6076923805348d495ccea95e6bf51e4.jpg" },
+                { ep: 6, title: "For All Time. Always.", image: "https://m.media-amazon.com/images/M/MV5BMTAzMmNlNDItNzA1Ny00OTg5LThjYzItMDExNjA1NWQxNDRhXkEyXkFqcGc@._V1_.jpg" }
+            ]
+        },
+        {
+            season: 2,
+            episodes: [
+                { ep: 1, title: "Ouroboros", image: "https://cdn.mos.cms.futurecdn.net/MmxUnD3nnrbS24bp8HvaWd.jpg" },
+                { ep: 2, title: "Breaking Brad", image: "https://static0.colliderimages.com/wordpress/wp-content/uploads/2023/08/loki-season-2-tom-hiddleston-sophia-di-martino-social-feature.jpg" },
+                { ep: 3, title: "1893", image: "https://hips.hearstapps.com/hmg-prod/images/loki-6533c7f35590b.png?crop=0.8879023307436182xw:1xh;0,0" },
+                { ep: 4, title: "Heart of the TVA", image: "https://thespool.net/wp-content/uploads/2023/11/Loki-Season-Episode-4-Featured.jpg" },
+                { ep: 5, title: "Science/Fiction", image: "https://www.denofgeek.com/wp-content/uploads/2023/11/ARC-205-18116_R.jpg?resize=768%2C432" },
+                { ep: 6, title: "Glorious Purpose (S2)", image: "https://www.denofgeek.com/wp-content/uploads/2023/11/ARC-206-21297_R.jpg?resize=768%2C432" }
+            ]
+        }
+    ]
     },
 	{
     id: 2005,
