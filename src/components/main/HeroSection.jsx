@@ -1,10 +1,11 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-import movies from "../../data/movies";
+import media from "../../data/media";
 import useSlider from "../../hook/useSlider";
 
-const heroMovies = movies.filter((movie) => movie.id >= 1 && movie.id <= 5);
+const heroMovies = media.filter((item) => item.type === "movie" && item.id >= 1 && item.id <= 5);
+
 
 const HeroSection = () => {
 	const { index, nextSlide, prevSlide } = useSlider(heroMovies.length, 30000);
@@ -23,16 +24,16 @@ const HeroSection = () => {
 					{/* Video Layer */}
 					<div className="absolute inset-0 w-full h-full scale-125">
 						<iframe
-							src={movies[index].videoUrl}
+							src={heroMovies[index].videoUrl}
 							className="w-full h-full object-cover pointer-events-none"
 							allow="autoplay; encrypted-media"
-							title={movies[index].title}
+							title={heroMovies[index].title}
 						/>
 					</div>
 
 					{/* Cinematic Overlays */}
-					<div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-black/60" />
-					<div className="absolute inset-0 bg-gradient-to-r from-black/80 via-transparent to-transparent" />
+					  <div className="absolute inset-0 bg-linear-to-t from-black via-black/20 to-black/60" />
+					  <div className="absolute inset-0 bg-linear-to-r from-black/80 via-transparent to-transparent" />
 
 					{/* Content */}
 					<div className="relative z-10 flex flex-col items-start justify-center h-full max-w-7xl mx-auto px-8 md:px-16">
@@ -42,7 +43,7 @@ const HeroSection = () => {
 							transition={{ delay: 0.3 }}
 							className="tracking-[0.4em] text-xs md:text-sm mb-4 text-gray-300 font-medium uppercase"
 						>
-							{movies[index].director}
+							{heroMovies[index].director}
 						</motion.p>
 
 						<motion.h1
@@ -51,7 +52,7 @@ const HeroSection = () => {
 							transition={{ delay: 0.4 }}
 							className="text-7xl md:text-9xl font-black tracking-tighter text-white italic leading-none mb-6"
 						>
-							{movies[index].title}
+							{heroMovies[index].title}
 						</motion.h1>
 
 						<motion.p
@@ -60,7 +61,7 @@ const HeroSection = () => {
 							transition={{ delay: 0.5 }}
 							className="tracking-[0.6em] text-sm md:text-lg text-white border-l-4 border-red-600 pl-4 uppercase"
 						>
-							{movies[index].tagline}
+							{heroMovies[index].tagline}
 						</motion.p>
 
 						<motion.div
@@ -100,11 +101,11 @@ const HeroSection = () => {
 					<button
 						onClick={prevSlide}
 						className="w-10 h-10 flex items-center justify-center 
-            bg-white/10 hover:bg-white/20 
-            border border-white/20 
-            backdrop-blur-md 
-            text-white rounded-full 
-            transition-all duration-200 hover:cursor-pointer"
+						bg-white/10 hover:bg-white/20 
+						border border-white/20 
+						backdrop-blur-md 
+						text-white rounded-full 
+						transition-all duration-200 hover:cursor-pointer"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -125,11 +126,11 @@ const HeroSection = () => {
 					<button
 						onClick={nextSlide}
 						className="w-10 h-10 flex items-center justify-center 
-            bg-white/10 hover:bg-white/20 
-            border border-white/20 
-            backdrop-blur-md 
-            text-white rounded-full 
-            transition-all duration-200 hover:cursor-pointer"
+						bg-white/10 hover:bg-white/20 
+						border border-white/20 
+						backdrop-blur-md 
+						text-white rounded-full 
+						transition-all duration-200 hover:cursor-pointer"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"

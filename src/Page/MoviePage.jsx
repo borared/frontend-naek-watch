@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import movies from "../data/movies";
+import media from "../data/media";
 import MovieCard from "../components/MovieCard";
 
 export default function MoviesPage() {
   
   // Only full movies
-  const fullMovies = movies.filter((movie) => movie.type === "movie");
+  const fullMovies = media.filter((movie) => movie.type === "movie");
 
   // Most watched (if views exist)
   const mostWatched = [...fullMovies]

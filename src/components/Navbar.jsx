@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 // Import your database (adjust the path based on where your movie.js is)
-import movies from "../data/movies"; 
+import media from "../data/media";
 
 export default function Navbar() {
     const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -9,7 +9,7 @@ export default function Navbar() {
 
     // Filter logic: search by title or category
     const filteredMovies = searchQuery
-        ? movies.filter(movie => 
+    ? media.filter(movie =>
             movie.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
             movie.categories.some(cat => cat.toLowerCase().includes(searchQuery.toLowerCase()))
           ).slice(0, 6) // Limit to 6 results for better UI

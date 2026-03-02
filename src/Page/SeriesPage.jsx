@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import movies from "../data/movies";
+import media from "../data/media";
 import MovieCard from "../components/MovieCard";
 
 export default function SeriesPage() {
   
   // Only series
-  const seriesList = movies.filter((item) => item.type === "series");
+  const seriesList = media.filter((item) => item.type === "series");
 
   // Most watched series
   const mostWatchedSeries = [...seriesList]
