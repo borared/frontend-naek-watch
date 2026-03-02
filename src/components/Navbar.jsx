@@ -97,7 +97,7 @@ export default function Navbar() {
                             {filteredMovies.length > 0 ? (
                                 filteredMovies.map(movie => (
                                     <Link key={movie.id} to={`/movie/${movie.id}`} onClick={() => setIsSearchOpen(false)} className="flex items-center gap-3 p-3 hover:bg-white/5 border-b border-white/5 last:border-none">
-                                        <img src={movie.image} alt={movie.title} className="w-12 h-16 object-cover rounded" />
+                                        <img src={movie.image} alt={movie.title} className="w-20 h-28 object-cover rounded" />
                                         <div className="flex-1 overflow-hidden">
                                             <h4 className="text-sm font-bold truncate uppercase">{movie.title}</h4>
                                             <p className="text-xs text-gray-500">{movie.year} • {movie.type}</p>
