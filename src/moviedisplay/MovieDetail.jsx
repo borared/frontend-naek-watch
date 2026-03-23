@@ -23,7 +23,8 @@ export default function MovieDetail() {
 			rating: found.rating || "-",
 			year: found.year || "",
 			duration: found.duration || "",
-			videoUrl: found.videoUrl || "",
+			videoUrl: found.videoUrl || found.trailer || "",
+			trailerUrl: found.trailerUrl || found.trailer || "",
 		};
 
 		// Transform seasons data if it exists (normalize different season formats)
@@ -57,7 +58,7 @@ export default function MovieDetail() {
 	// Set initial trailer
 	useEffect(() => {
 		if (movie) {
-			setCurrentTrailer(movie.videoUrl || movie.trailerUrl);
+			setCurrentTrailer(movie.videoUrl || movie.trailerUrl || movie.trailer);
 		}
 	}, [movie]);
 
