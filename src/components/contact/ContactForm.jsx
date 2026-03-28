@@ -35,9 +35,9 @@ const ContactForm = () => {
     };
 
     return (
-        <div className="bg-zinc-900/50 border border-white/10 rounded-3xl p-8 backdrop-blur-sm">
-            <h2 className="text-3xl font-bold text-white mb-2">ផ្ញើសារមកយើង</h2>
-            <p className="text-gray-400 mb-8">Send us a message</p>
+        <div className="bg-zinc-900/50 border border-white/10 rounded-3xl p-8 backdrop-blur-sm font-Kantumruy">
+            <h2 className="text-3xl font-bold text-white mb-2 font-Kantumruy">ផ្ញើសារមកយើង</h2>
+            <p className="text-gray-400 mb-8 font-Kantumruy">Send us a message</p>
 
             {submitted ? (
                 <div className="text-center py-12">
@@ -46,13 +46,13 @@ const ContactForm = () => {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
-                    <p className="text-gray-400">We'll get back to you soon.</p>
+                    <h3 className="text-2xl font-bold text-white mb-2 font-Kantumruy">Message Sent!</h3>
+                    <p className="text-gray-400 font-Kantumruy">We'll get back to you soon.</p>
                 </div>
             ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                     <div>
-                        <label className="block text-sm font-medium text-gray-400 mb-2">
+                        <label className="block text-sm font-medium text-gray-400 mb-2 font-Kantumruy">
                             Your Name <span className="text-red-500">*</span>
                         </label>
                         <input
@@ -60,14 +60,14 @@ const ContactForm = () => {
                             name="name"
                             value={form.name}
                             placeholder="John Doe"
-                            className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-red-600/50 focus:ring-2 focus:ring-red-600/20 transition-all"
+                            className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-red-600/50 focus:ring-2 focus:ring-red-600/20 transition-all font-Kantumruy"
                             onChange={handleChange}
                             required
                         />
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-gray-400 mb-2">
+                        <label className="block text-sm font-medium text-gray-400 mb-2 font-Kantumruy">
                             Email Address <span className="text-red-500">*</span>
                         </label>
                         <input
@@ -75,14 +75,14 @@ const ContactForm = () => {
                             name="email"
                             value={form.email}
                             placeholder="john@example.com"
-                            className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-red-600/50 focus:ring-2 focus:ring-red-600/20 transition-all"
+                            className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-red-600/50 focus:ring-2 focus:ring-red-600/20 transition-all font-Kantumruy"
                             onChange={handleChange}
                             required
                         />
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-gray-400 mb-2">
+                        <label className="block text-sm font-medium text-gray-400 mb-2 font-Kantumruy">
                             Subject <span className="text-red-500">*</span>
                         </label>
                         <input
@@ -90,21 +90,21 @@ const ContactForm = () => {
                             name="subject"
                             value={form.subject}
                             placeholder="How can we help?"
-                            className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-red-600/50 focus:ring-2 focus:ring-red-600/20 transition-all"
+                            className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-red-600/50 focus:ring-2 focus:ring-red-600/20 transition-all font-Kantumruy"
                             onChange={handleChange}
                             required
                         />
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-gray-400 mb-2">
+                        <label className="block text-sm font-medium text-gray-400 mb-2 font-Kantumruy">
                             Message <span className="text-red-500">*</span>
                         </label>
                         <textarea
                             name="message"
                             value={form.message}
                             placeholder="Tell us more about your inquiry..."
-                            className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-red-600/50 focus:ring-2 focus:ring-red-600/20 transition-all resize-none"
+                            className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-red-600/50 focus:ring-2 focus:ring-red-600/20 transition-all resize-none font-Kantumruy"
                             rows="6"
                             onChange={handleChange}
                             required
@@ -114,7 +114,7 @@ const ContactForm = () => {
                     <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-2"
+                        className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-2 font-Kantumruy"
                     >
                         {isSubmitting ? (
                             <>
