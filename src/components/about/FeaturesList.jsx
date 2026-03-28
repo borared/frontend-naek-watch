@@ -63,16 +63,16 @@ const FeaturesList = () => {
     ];
 
     return (
-        <div className="bg-zinc-950 border-t border-white/5 py-20">
+        <div className="bg-zinc-950 border-t border-white/5 py-20 font-Kantumruy">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <div className="inline-block px-4 py-2 bg-red-600/10 border border-red-600/20 rounded-full mb-4">
-                        <span className="text-red-500 text-sm font-semibold uppercase tracking-wider">Features</span>
+                        <span className="text-red-500 text-sm font-semibold uppercase tracking-wider font-Kantumruy">មុខងារ • Features</span>
                     </div>
-                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-Kantumruy">
                         មុខងារសំខាន់ៗ
                     </h2>
-                    <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+                    <p className="text-gray-400 text-lg max-w-2xl mx-auto font-Kantumruy">
                         Everything you need to discover and track your favorite entertainment
                     </p>
                 </div>
@@ -93,10 +93,10 @@ const FeaturesList = () => {
                                 <h3 className="text-xl font-bold text-white mb-2 font-Kantumruy">
                                     {feature.titleKh}
                                 </h3>
-                                <h4 className="text-lg font-semibold text-gray-400 mb-3">
+                                <h4 className="text-lg font-semibold text-gray-400 mb-3 font-Kantumruy">
                                     {feature.title}
                                 </h4>
-                                <p className="text-gray-500 leading-relaxed">
+                                <p className="text-gray-500 leading-relaxed font-Kantumruy">
                                     {feature.description}
                                 </p>
                             </div>

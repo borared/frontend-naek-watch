@@ -4,19 +4,19 @@ const AboutHeader = () => {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(220,38,38,0.1),transparent_50%)]"></div>
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(220,38,38,0.05),transparent_50%)]"></div>
 
-            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
+            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center font-Kantumruy">
                 <div className="inline-block mb-4 px-4 py-2 bg-red-600/10 border border-red-600/20 rounded-full">
-                    <span className="text-red-500 text-sm font-semibold uppercase tracking-wider">អំពីយើង • About Us</span>
+                    <span className="text-red-500 text-sm font-semibold uppercase tracking-wider font-Kantumruy">អំពីយើង • About Us</span>
                 </div>
 
-                <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
+                <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight font-Kantumruy">
                     About <span className="text-red-600">NaekWatch</span>
                 </h1>
 
                 <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed font-Kantumruy">
                     វេទិកាកំសាន្តរបស់អ្នក សម្រាប់ស្វែងរក តាមដាន និងរីករាយជាមួយរឿងភាពយន្ត និងរឿងភាគ
                 </p>
-                <p className="text-lg text-gray-500 max-w-2xl mx-auto mt-3">
+                <p className="text-lg text-gray-500 max-w-2xl mx-auto mt-3 font-Kantumruy">
                     Your ultimate platform for discovering, tracking, and enjoying movies and TV series
                 </p>
             </div>
