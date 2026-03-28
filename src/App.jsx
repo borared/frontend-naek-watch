@@ -10,6 +10,8 @@ import RedeemCheckout from "./Page/RedeemCheckout.jsx";
 import { UserProvider } from "./context/UserContext";
 import MoviesPage from "./Page/MoviePage.jsx";
 import SeriesPage from "./Page/SeriesPage.jsx"
+import ContactUs from "./Page/Contact.jsx";
+import AboutUs from "./Page/AboutUs.jsx";
 
 export default function App() {
     return (
@@ -27,6 +29,8 @@ export default function App() {
                         <Route path="/store" element={<Store />} />
                         <Route path="/missions" element={<Tasks />} />
                         <Route path="/redeem-checkout" element={<RedeemCheckout />} />
+                        <Route path="/contact" element={<ContactUs />} />
+                        <Route path="/about" element={<AboutUs />} />
                     </Routes>
                 </main>
 
