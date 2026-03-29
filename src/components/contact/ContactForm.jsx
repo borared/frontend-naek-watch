@@ -37,7 +37,7 @@ const ContactForm = () => {
     return (
         <div className="bg-zinc-900/50 border border-white/10 rounded-3xl p-8 backdrop-blur-sm font-Kantumruy">
             <h2 className="text-3xl font-bold text-white mb-2 font-Kantumruy">ផ្ញើសារមកយើង</h2>
-            <p className="text-gray-400 mb-8 font-Kantumruy">Send us a message</p>
+            <p className="text-white mb-8 font-Kantumruy">Send us a message</p>
 
             {submitted ? (
                 <div className="text-center py-12">
@@ -52,7 +52,7 @@ const ContactForm = () => {
             ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                     <div>
-                        <label className="block text-sm font-medium text-gray-400 mb-2 font-Kantumruy">
+                        <label className="block text-sm font-medium text-white mb-2 font-Kantumruy">
                             Your Name <span className="text-red-500">*</span>
                         </label>
                         <input
@@ -67,7 +67,7 @@ const ContactForm = () => {
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-gray-400 mb-2 font-Kantumruy">
+                        <label className="block text-sm font-medium text-white mb-2 font-Kantumruy">
                             Email Address <span className="text-red-500">*</span>
                         </label>
                         <input
@@ -82,7 +82,7 @@ const ContactForm = () => {
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-gray-400 mb-2 font-Kantumruy">
+                        <label className="block text-sm font-medium text-white mb-2 font-Kantumruy">
                             Subject <span className="text-red-500">*</span>
                         </label>
                         <input
@@ -97,7 +97,7 @@ const ContactForm = () => {
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-gray-400 mb-2 font-Kantumruy">
+                        <label className="block text-sm font-medium text-white mb-2 font-Kantumruy">
                             Message <span className="text-red-500">*</span>
                         </label>
                         <textarea

@@ -13,10 +13,10 @@ const ContactHeader = () => {
                     Get In <span className="text-red-600">Touch</span>
                 </h1>
 
-                <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed font-Kantumruy">
+                <p className="text-xl text-white max-w-3xl mx-auto leading-relaxed font-Kantumruy">
                     ទាក់ទងមកយើងខ្ញុំសម្រាប់ជំនួយ មតិកែលម្អ ឬសំណួរផ្សេងៗ
                 </p>
-                <p className="text-lg text-gray-500 max-w-2xl mx-auto mt-3 font-Kantumruy">
+                <p className="text-lg text-white max-w-2xl mx-auto mt-3 font-Kantumruy">
                     Reach out to NaekWatch for support, feedback, or any inquiries
                 </p>
             </div>

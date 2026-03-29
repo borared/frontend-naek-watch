@@ -1,0 +1,10 @@
+[33mebff1a9[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mSeth[m[33m, [m[1;31morigin/Seth[m[33m)[m Update ContactForm
+[33ma9324c7[m Update ContactInfo
+[33m1684ad6[m Update ContactHeader
+[33md4b2bef[m Update AboutContent
+[33m01dae9d[m Add AboutContent
+[33m8b7718a[m Merge origin/main into Seth - resolved conflicts by accepting main branch changes
+[33m286ad84[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m Fixed to retrieve movie upcomming trailer
+[33m11e26f4[m added more movie trailer
+[33m7834e91[m fix in MovieSlider to retrieve data type series from series.js in data folder
+[33m71194ec[m Merge branch 'main' of https://github.com/developOnion/frontend-naek-watch

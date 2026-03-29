@@ -13,10 +13,10 @@ const AboutHeader = () => {
                     About <span className="text-red-600">NaekWatch</span>
                 </h1>
 
-                <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed font-Kantumruy">
+                <p className="text-xl text-white max-w-3xl mx-auto leading-relaxed font-Kantumruy">
                     វេទិកាកំសាន្តរបស់អ្នក សម្រាប់ស្វែងរក តាមដាន និងរីករាយជាមួយរឿងភាពយន្ត និងរឿងភាគ
                 </p>
-                <p className="text-lg text-gray-500 max-w-2xl mx-auto mt-3 font-Kantumruy">
+                <p className="text-lg text-white max-w-2xl mx-auto mt-3 font-Kantumruy">
                     Your ultimate platform for discovering, tracking, and enjoying movies and TV series
                 </p>
             </div>

@@ -46,7 +46,7 @@ const ContactInfo = () => {
         <div className="space-y-8 font-Kantumruy">
             <div className="bg-zinc-900/50 border border-white/10 rounded-3xl p-8 backdrop-blur-sm">
                 <h2 className="text-3xl font-bold text-white mb-2 font-Kantumruy">ព័ត៌មានទំនាក់ទំនង</h2>
-                <p className="text-gray-400 mb-8 font-Kantumruy">Contact Information</p>
+                <p className="text-white mb-8 font-Kantumruy">Contact Information</p>
 
                 <div className="space-y-6">
                     {contactMethods.map((method, index) => (
@@ -60,8 +60,8 @@ const ContactInfo = () => {
                                         {method.icon}
                                     </div>
                                     <div className="flex-1">
-                                        <div className="text-sm text-gray-500 font-Kantumruy">{method.titleKh}</div>
-                                        <div className="text-xs text-gray-600 mb-1 font-Kantumruy">{method.title}</div>
+                                        <div className="text-sm text-white font-Kantumruy">{method.titleKh}</div>
+                                        <div className="text-xs text-white mb-1 font-Kantumruy">{method.title}</div>
                                         <div className="text-white font-medium group-hover:text-red-500 transition-colors font-Kantumruy">{method.value}</div>
                                     </div>
                                 </a>
@@ -71,8 +71,8 @@ const ContactInfo = () => {
                                         {method.icon}
                                     </div>
                                     <div className="flex-1">
-                                        <div className="text-sm text-gray-500 font-Kantumruy">{method.titleKh}</div>
-                                        <div className="text-xs text-gray-600 mb-1 font-Kantumruy">{method.title}</div>
+                                        <div className="text-sm text-white font-Kantumruy">{method.titleKh}</div>
+                                        <div className="text-xs text-white mb-1 font-Kantumruy">{method.title}</div>
                                         <div className="text-white font-medium font-Kantumruy">{method.value}</div>
                                     </div>
                                 </div>
@@ -84,7 +84,7 @@ const ContactInfo = () => {
 
             <div className="bg-zinc-900/50 border border-white/10 rounded-3xl p-8 backdrop-blur-sm">
                 <h3 className="text-xl font-bold text-white mb-4 font-Kantumruy">Follow Us</h3>
-                <p className="text-gray-400 mb-6 font-Kantumruy">Stay connected on social media</p>
+                <p className="text-white mb-6 font-Kantumruy">Stay connected on social media</p>
 
                 <div className="flex gap-4">
                     {socialLinks.map((social, index) => (
@@ -111,7 +111,7 @@ const ContactInfo = () => {
                     </div>
                     <div>
                         <h3 className="text-white font-semibold text-lg mb-2 font-Kantumruy">Need Help?</h3>
-                        <p className="text-gray-400 leading-relaxed font-Kantumruy">
+                        <p className="text-white leading-relaxed font-Kantumruy">
                             We're here to help you track your favorite movies and TV series. Feel free to reach out anytime!
                         </p>
                     </div>
