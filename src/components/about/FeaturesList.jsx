@@ -66,8 +66,8 @@ const FeaturesList = () => {
         <div className="bg-zinc-950 border-t border-white/5 py-20 font-Kantumruy">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
-                    <div className="inline-block px-4 py-2 bg-red-600/10 border border-red-600/20 rounded-full mb-4">
-                        <span className="text-red-500 text-sm font-semibold uppercase tracking-wider font-Kantumruy">មុខងារ • Features</span>
+                    <div className="inline-block px-4 py-2 rounded-full mb-4">
+                        <span className="text-white text-sm font-semibold uppercase tracking-wider font-Kantumruy">មុខងារ • Features</span>
                     </div>
                     <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-Kantumruy">
                         មុខងារសំខាន់ៗ
@@ -81,12 +81,10 @@ const FeaturesList = () => {
                     {features.map((feature, index) => (
                         <div
                             key={index}
-                            className="group relative bg-zinc-900/50 border border-white/5 rounded-2xl p-8 hover:border-red-600/30 transition-all duration-300 hover:transform hover:scale-105"
+                            className="relative bg-zinc-900/50 border border-white/5 rounded-2xl p-8 cursor-pointer"
                         >
-                            <div className="absolute inset-0 bg-gradient-to-br from-red-600/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-
                             <div className="relative">
-                                <div className="w-16 h-16 bg-red-600/10 border border-red-600/20 rounded-xl flex items-center justify-center mb-6 text-red-500 group-hover:bg-red-600/20 group-hover:scale-110 transition-all">
+                                <div className="w-16 h-16 bg-white/10 border border-white/20 rounded-xl flex items-center justify-center mb-6 text-white">
                                     {feature.icon}
                                 </div>
 
