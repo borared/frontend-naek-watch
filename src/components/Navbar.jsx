@@ -35,7 +35,7 @@ export default function Navbar() {
                 </button>
 
                 <Link to="/" className="flex-shrink-0">
-                    <h1 className="text-red-600 text-xl md:text-2xl font-bold tracking-tighter uppercase">NaekWatch</h1>
+                    <h1 className="text-red-600 text-xl md:text-2xl font-bold tracking-tighter">NaekWatch</h1>
                 </Link>
             </div>
 
