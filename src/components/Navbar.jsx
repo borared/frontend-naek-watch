@@ -18,7 +18,7 @@ export default function Navbar() {
     const countries = ["កម្ពុជា", "កូរ៉េ", "ចិន", "ហូលីវូដ", "ជប៉ុន"];
 
     return (
-        <nav className="fixed top-0 left-0 w-full z-50 bg-black text-white px-4 md:px-6 py-4 flex items-center justify-between shadow-lg border-b border-white/10">
+        <nav className="fixed top-0 left-0 w-full z-50 bg-black text-white px-4 md:px-6 py-4 flex items-center justify-between shadow-lg border-b border-white/10 transform-gpu" style={{ transform: "translateZ(0)" }}>
             
             {/* 1. LEFT: Hamburger + Logo */}
             <div className="flex items-center gap-4">

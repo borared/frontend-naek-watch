@@ -17,7 +17,7 @@ const MovieCard = ({ movie }) => {
           src={movie.image}
           alt={movie.title}
           className="w-full h-full object-cover transition-transform duration-500 
-          hover:scale-110 group-hover:brightness-110"
+          hover:scale-110 group-hover:brightness-110 transform-gpu will-change-transform"
           loading="lazy"
         />
 
@@ -25,6 +25,7 @@ const MovieCard = ({ movie }) => {
           bg-gradient-to-t from-black/60 via-transparent to-transparent 
           opacity-0 group-hover:opacity-100 
           transition-opacity duration-300"
+          style={{ transform: "translateZ(0)", backfaceVisibility: "hidden" }}
         />
       </div>
 

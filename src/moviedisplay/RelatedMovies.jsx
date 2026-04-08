@@ -8,7 +8,7 @@ export default function RelatedMovies({ movies, onSelectMovie }) {
         {movies.map((r) => (
           <div
             key={r.id}
-            className="rounded-lg bg-black/60 overflow-hidden cursor-pointer hover:scale-105 transition transform"
+            className="rounded-lg bg-black/60 overflow-hidden cursor-pointer hover:scale-105 transition transform transform-gpu will-change-transform"
             onClick={() =>
               onSelectMovie({
                 ...r,

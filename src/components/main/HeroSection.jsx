@@ -22,21 +22,22 @@ const HeroSection = () => {
 					className="absolute inset-0 w-full h-full"
 				>
 					{/* Video Layer */}
-					<div className="absolute inset-0 w-full h-full scale-125">
+					<div className="absolute inset-0 w-full h-full scale-125" style={{ transform: "translateZ(0)" }}>
 						<iframe
-							src={heroMovies[index].videoUrl}
+							src={`${heroMovies[index].videoUrl}${heroMovies[index].videoUrl.includes('?') ? '&' : '?'}autoplay=1&mute=1&controls=0&loop=1&wmode=transparent&rel=0`}
 							className="w-full h-full object-cover pointer-events-none"
-							allow="autoplay; encrypted-media"
+							allow="autoplay; encrypted-media; picture-in-picture"
 							title={heroMovies[index].title}
+							loading="lazy"
 						/>
 					</div>
 
 					{/* Cinematic Overlays */}
-					  <div className="absolute inset-0 bg-linear-to-t from-black via-black/20 to-black/60" />
-					  <div className="absolute inset-0 bg-linear-to-r from-black/80 via-transparent to-transparent" />
+					  <div className="absolute inset-0 bg-linear-to-t from-black via-black/20 to-black/60 pointer-events-none" style={{ transform: "translateZ(0)", backfaceVisibility: "hidden" }} />
+					  <div className="absolute inset-0 bg-linear-to-r from-black/80 via-transparent to-transparent pointer-events-none" style={{ transform: "translateZ(0)", backfaceVisibility: "hidden" }} />
 
 					{/* Content */}
-					<div className="relative z-10 flex flex-col items-start justify-center h-full max-w-7xl mx-auto px-8 md:px-16">
+					<div className="relative z-10 flex flex-col items-start justify-center h-full max-w-7xl mx-auto px-8 md:px-16" style={{ transform: "translateZ(0)" }}>
 						<motion.p
 							initial={{ y: 20, opacity: 0 }}
 							animate={{ y: 0, opacity: 1 }}
@@ -72,11 +73,11 @@ const HeroSection = () => {
 						>
 							<Link
 								to={`/movie/${heroMovies[index].id}`}
-								className="flex items-center justify-center px-10 h-13 bg-white text-black font-bold text-[15px] hover:scale-105 transition-transform duration-200 font-Kantumruy cursor-pointer"
+								className="flex items-center justify-center px-10 h-13 bg-white text-black font-bold text-[15px] hover:scale-105 transition-transform duration-200 font-Kantumruy cursor-pointer transform-gpu"
 							>
 								ទស្សនាឥឡូវនេះ
 							</Link>
-							<button className="px-10 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white font-bold text-sm hover:bg-white/20 transition-all">
+							<button className="px-10 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white font-bold text-sm hover:bg-white/20 transition-all transform-gpu">
 								+ MY LIST
 							</button>
 						</motion.div>
@@ -105,7 +106,7 @@ const HeroSection = () => {
 						border border-white/20 
 						backdrop-blur-md 
 						text-white rounded-full 
-						transition-all duration-200 hover:cursor-pointer"
+						transition-all duration-200 hover:cursor-pointer transform-gpu will-change-transform"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -130,7 +131,7 @@ const HeroSection = () => {
 						border border-white/20 
 						backdrop-blur-md 
 						text-white rounded-full 
-						transition-all duration-200 hover:cursor-pointer"
+						transition-all duration-200 hover:cursor-pointer transform-gpu will-change-transform"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
