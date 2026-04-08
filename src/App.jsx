@@ -14,6 +14,7 @@ import ContactUs from "./Page/Contact.jsx";
 import AboutUs from "./Page/AboutUs.jsx";
 import GenrePage from "./Page/GenrePage.jsx";
 
+
 export default function App() {
 	return (
 		<UserProvider>
