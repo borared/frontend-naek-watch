@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ChevronRight } from "lucide-react";
 import MovieCard from "../MovieCard";
 import movies from "../../data/movies";
@@ -8,7 +8,18 @@ import { useNavigate } from "react-router-dom";
 
 const MovieSlider = ({ category, title }) => {
 	const [currentPage, setCurrentPage] = useState(0);
+	const [cardsPerPage, setCardsPerPage] = useState(5);
 	const navigate = useNavigate();
+
+	useEffect(() => {
+		const updateCardsPerPage = () => {
+			setCardsPerPage(window.innerWidth <= 768 ? 3 : 5);
+		};
+
+		updateCardsPerPage();
+		window.addEventListener("resize", updateCardsPerPage);
+		return () => window.removeEventListener("resize", updateCardsPerPage);
+	}, []);
 
 	// Combine movies and series data
 	const allMovies = [...movies, ...series];
@@ -22,10 +33,20 @@ const MovieSlider = ({ category, title }) => {
 	const hasSeries = filteredMovies.some((movie) => movie.type === "series");
 
 	// 3. Now calculate chunkSize and pages
-	const chunkSize = hasSeries ? 3 : 5;
+	const chunkSize = hasSeries ? 3 : cardsPerPage;
 	const moviePages = chunkArray(filteredMovies, chunkSize);
 
-	const columnsClass = hasSeries ? "grid-cols-3" : "grid-cols-5";
+	useEffect(() => {
+		if (currentPage >= moviePages.length) {
+			setCurrentPage(0);
+		}
+	}, [currentPage, moviePages.length]);
+
+	const columnsClass = hasSeries
+		? "grid-cols-3"
+		: cardsPerPage === 5
+			? "grid-cols-5"
+			: "grid-cols-3";
 
 	const handleNext = () => {
 		setCurrentPage((prev) => (prev + 1) % moviePages.length);
@@ -58,7 +79,7 @@ const MovieSlider = ({ category, title }) => {
 							onClick={() => handleSelectMovie(movie)}
 							className="cursor-pointer"
 						>
-							<MovieCard key={movie.id} movie={movie} />
+							<MovieCard movie={movie} />
 						</div>
 					))}
 				</div>
