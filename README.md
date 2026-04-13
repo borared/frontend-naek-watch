@@ -5,7 +5,7 @@
 This project is part of an **end-of-course of Frontend final project Term 2**, designed to demonstrate skills in **web development and UI/UX design**.   
 
 ## Live Demo
-Check out the live version of the project here: [TosTrip Website](https://tos-trip-trip-guidance-website.vercel.app/)
+Check out the live version of the project here: [TosTrip Website](https://naek-watch.vercel.app/)
 
 
 ## 🛠️ Technologies Used  
